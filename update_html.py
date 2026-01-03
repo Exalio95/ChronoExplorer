@@ -25,7 +25,7 @@ for ep_id, filename in episode_files:
 scripts_block = "\n".join(script_tags)
 
 # 3. Update explorer.html
-html_path = r"c:\Users\rapha\Documents\Annecdote\explorer.html"
+html_path = r"c:\Users\rapha\Documents\ChronoExplorer\index.html"
 with open(html_path, 'r', encoding='utf-8') as f:
     content = f.read()
 
