@@ -232,8 +232,8 @@ body {
     content: '';
     position: absolute;
     inset: -1px;
-    background: rgba(0, 0, 0, 0.2);
-    /* Lighter overlay */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+    /* Gradient overlay */
     border-radius: inherit;
     z-index: -1;
     pointer-events: none;

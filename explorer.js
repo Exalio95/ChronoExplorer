@@ -237,10 +237,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const tagsHtml = ep.topTags.slice(0, 3).map(tag => `<span class="mini-tag">#${tag}</span>`).join('');
 
             // Priority Badge
-            const pInfo = priorityMap[ep.priority] || priorityMap[3]; // Default to 3
             const badgeHtml = `<div class="priority-badge ${pInfo.class}" title="${pInfo.label}">${pInfo.icon} <span class="badge-text">${pInfo.label}</span></div>`;
 
-            cardEl.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.85)), url('${bgImage}')`;
+            cardEl.style.backgroundImage = `url('${bgImage}')`;
             cardEl.style.backgroundSize = 'cover';
             cardEl.style.backgroundPosition = 'center';
 
@@ -383,11 +382,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Filter Toggle Logic
     const toggleFiltersBtn = document.getElementById('toggleFiltersBtn');
     const sidebar = document.querySelector('.sidebar');
-    
+
     if (toggleFiltersBtn) {
         toggleFiltersBtn.addEventListener('click', () => {
-             sidebar.classList.toggle('active');
-             // Update icon or text if needed?
+            sidebar.classList.toggle('active');
+            // Update icon or text if needed?
         });
     }
 
