@@ -305,18 +305,9 @@ body {
     z-index: 1;
 }
 
-/* Create a true overlay that fills the card perfectly */
+/* Overlay Removed for Player Card (fixes swipe/touch issues) */
 .player-card::before {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    /* Overlap borders slightly to avoid gaps */
-    background: rgba(0, 0, 0, 0.3);
-    /* LIGHTER overlay for player (was 0.7) */
-    border-radius: inherit;
-    z-index: -1;
-    /* Behind text */
-    pointer-events: none;
+    display: none;
 }
 
 /* Ensure content sits above overlay */
