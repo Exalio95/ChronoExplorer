@@ -223,7 +223,20 @@ body {
     position: relative;
     height: 320px;
     opacity: 1;
+    z-index: 1;
     /* Star hidden for animate-in */
+}
+
+/* Perfect Overlay for Main Cards */
+.card-item::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: rgba(0, 0, 0, 0.4);
+    /* Moderate overlay */
+    border-radius: inherit;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .card-item.animate-in {
@@ -260,6 +273,55 @@ body {
     padding: 1.5rem;
     height: 100%;
     box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    /* Content above overlay */
+}
+
+/* ... skipped ... */
+
+/* --- Player Card Container & Overlay Fix --- */
+.player-card {
+    width: 100%;
+    max-width: 600px;
+    min-height: 400px;
+    padding: 3rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid var(--accent-blue);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-height: 85vh;
+    overflow-y: auto;
+    /* Overlay fix */
+    position: relative;
+    z-index: 1;
+}
+
+/* Create a true overlay that fills the card perfectly */
+.player-card::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    /* Overlap borders slightly to avoid gaps */
+    background: rgba(0, 0, 0, 0.3);
+    /* LIGHTER overlay for player (was 0.7) */
+    border-radius: inherit;
+    z-index: -1;
+    /* Behind text */
+    pointer-events: none;
+}
+
+/* Ensure content sits above overlay */
+.player-card>* {
+    position: relative;
+    z-index: 2;
 }
 
 .card-category {
