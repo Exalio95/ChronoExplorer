@@ -237,6 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const tagsHtml = ep.topTags.slice(0, 3).map(tag => `<span class="mini-tag">#${tag}</span>`).join('');
 
             // Priority Badge
+            const pInfo = priorityMap[ep.priority] || priorityMap[3]; // Default to 3
             const badgeHtml = `<div class="priority-badge ${pInfo.class}" title="${pInfo.label}">${pInfo.icon} <span class="badge-text">${pInfo.label}</span></div>`;
 
             cardEl.style.backgroundImage = `url('${bgImage}')`;

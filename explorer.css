@@ -227,7 +227,16 @@ body {
     /* Star hidden for animate-in */
 }
 
-/* Overlay removed as requested */
+/* Perfect Overlay for Main Cards - Light Gradient */
+.card-item::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    border-radius: inherit;
+    z-index: -1;
+    pointer-events: none;
+}
 
 .card-item.animate-in {
     animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
