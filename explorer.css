@@ -11,6 +11,10 @@
     --shadow-glow: 0 0 15px rgba(56, 189, 248, 0.15);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -431,7 +435,8 @@ body {
 
     /* Mobile Header */
     .glass-header {
-        flex-direction: row; /* Keep row */
+        flex-direction: row;
+        /* Keep row */
         flex-wrap: wrap;
         gap: 0.5rem;
         padding: 0.8rem 1rem;
@@ -443,18 +448,21 @@ body {
 
     .stats-badge {
         font-size: 0.75rem;
-        margin-left: auto; /* Push to right */
+        margin-left: auto;
+        /* Push to right */
     }
 
     .search-container {
         width: 100%;
-        order: 3; /* Move search below logo/badge */
+        order: 3;
+        /* Move search below logo/badge */
         margin-top: 0.5rem;
     }
 
     /* Mobile Sidebar / Filters */
     .mobile-filter-toggle {
-        display: block; /* Visible on mobile */
+        display: block;
+        /* Visible on mobile */
         width: 100%;
         margin: 1rem 0;
         padding: 0.8rem;
@@ -467,7 +475,8 @@ body {
     }
 
     .sidebar {
-        display: none; /* Hidden by default */
+        display: none;
+        /* Hidden by default */
         width: 100%;
         height: auto;
         position: static;
@@ -484,11 +493,13 @@ body {
     }
 
     .cards-grid {
-        grid-template-columns: 1fr; /* Single column */
+        grid-template-columns: 1fr;
+        /* Single column */
     }
 
     .card-item {
-        height: 280px; /* Slightly shorter */
+        height: 280px;
+        /* Slightly shorter */
     }
 }
 
@@ -503,12 +514,15 @@ body {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
+    /* Mobile Safari fix */
     background: var(--bg-dark);
     z-index: 2000;
     display: flex;
     flex-direction: column;
     animation: slideUp 0.3s ease-out;
+    overflow-y: auto;
+    /* Allow scrolling */
 }
 
 @keyframes slideUp {
@@ -600,6 +614,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    max-height: 85vh;
+    overflow-y: auto;
 }
 
 .player-card-content h2 {
