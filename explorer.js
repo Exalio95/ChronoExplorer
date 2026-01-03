@@ -354,6 +354,43 @@ document.addEventListener('DOMContentLoaded', () => {
         renderEpisodes();
     });
 
+    // Touch Swipe Logic
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    const handleTouchStart = (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    };
+
+    const handleTouchEnd = (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    };
+
+    const handleSwipe = () => {
+        const threshold = 50; // min distance
+        if (touchEndX < touchStartX - threshold) {
+            nextCard(); // Swipe Left -> Next
+        }
+        if (touchEndX > touchStartX + threshold) {
+            prevCard(); // Swipe Right -> Prev
+        }
+    };
+
+    activeCardEl.addEventListener('touchstart', handleTouchStart);
+    activeCardEl.addEventListener('touchend', handleTouchEnd);
+
+    // Mobile Filter Toggle Logic
+    const toggleFiltersBtn = document.getElementById('toggleFiltersBtn');
+    const sidebar = document.querySelector('.sidebar');
+    
+    if (toggleFiltersBtn) {
+        toggleFiltersBtn.addEventListener('click', () => {
+             sidebar.classList.toggle('active');
+             // Update icon or text if needed?
+        });
+    }
+
     // Initial Render
     renderFilters();
     renderEpisodes();
