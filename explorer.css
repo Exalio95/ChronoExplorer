@@ -427,6 +427,11 @@ body {
 }
 
 /* --- Responsive --- */
+/* Base style for toggle btn (hidden on desktop) */
+.mobile-filter-toggle {
+    display: none;
+}
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
     .app-layout {
@@ -503,10 +508,7 @@ body {
     }
 }
 
-/* Base style for toggle btn (hidden on desktop) */
-.mobile-filter-toggle {
-    display: none;
-}
+
 
 /* --- Player Overlay --- */
 .player-overlay {
