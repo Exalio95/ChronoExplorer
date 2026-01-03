@@ -232,8 +232,8 @@ body {
     content: '';
     position: absolute;
     inset: -1px;
-    background: rgba(0, 0, 0, 0.4);
-    /* Moderate overlay */
+    background: rgba(0, 0, 0, 0.2);
+    /* Lighter overlay */
     border-radius: inherit;
     z-index: -1;
     pointer-events: none;
