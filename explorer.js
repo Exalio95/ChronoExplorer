@@ -32,7 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Helper: Get Episode Priority
     // 1 (Highest) -> "Légendaire", 2 -> "Marquant", 3 -> "Insolite"
-    const getPriority = (cards) => {
+    const getPriority = (cards, episodeId) => {
+        // Use Global Manual Override if available
+        if (typeof manualEpisodePriorities !== 'undefined' && manualEpisodePriorities[episodeId]) {
+            return manualEpisodePriorities[episodeId];
+        }
+
         if (!cards || cards.length === 0) return 3;
         // Find the minimum priority value (1 is highest importance)
         const priorities = cards.map(c => c.priority || 3);
@@ -55,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const era = getEra(year);
         const topTags = getTopTags(ep.cards || []);
-        const priority = getPriority(ep.cards || []);
+        const priority = getPriority(ep.cards || [], ep.id);
 
         return {
             name: ep.title,
