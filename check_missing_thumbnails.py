@@ -12,7 +12,7 @@ for f in files:
     match = data_pattern.match(f)
     if match:
         ep_id = int(match.group(1))
-        if ep_id >= 60:
+        if ep_id >= 83:
             img_name = f"img_ep_{ep_id}.png"
             if img_name not in files:
                 missing.append((ep_id, f))
