@@ -181,8 +181,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Helper: Get Episode Image
+    // Helper: Get Episode Image Path
     const getEpisodeImage = (ep) => {
+        return `img_ep_${ep.id}.png`;
+    };
+
+    // Helper: Get Era Fallback Image
+    const getEraImage = (era) => {
         const eraImages = {
             "Préhistoire": "img_era_prehistory.png",
             "Antiquité": "img_era_antiquity.png",
@@ -190,14 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "Temps Modernes": "img_era_modern.png",
             "Époque Contemporaine": "img_era_contemporary.png"
         };
-        // List of episodes with specific custom images
-        const specificImages = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 89]);
-
-        if (specificImages.has(ep.id)) {
-            return `img_ep_${ep.id}.png`;
-        } else {
-            return eraImages[ep.era] || "img_era_antiquity.png";
-        }
+        return eraImages[era] || "img_era_antiquity.png";
     };
 
     // 3b. Render Episodes Grid
@@ -232,21 +230,24 @@ document.addEventListener('DOMContentLoaded', () => {
             // cardEl.style.animationDelay = `${index * 50}ms`;
 
             const bgImage = getEpisodeImage(ep);
+            const fallbackImage = getEraImage(ep.era);
 
             // Create Tags HTML - Limit to 3 visual tags
             const tagsHtml = ep.topTags.slice(0, 3).map(tag => `<span class="mini-tag">#${tag}</span>`).join('');
 
             // Priority Badge
             const pInfo = priorityMap[ep.priority] || priorityMap[3]; // Default to 3
-            const badgeHtml = `<div class="priority-badge ${pInfo.class}" title="${pInfo.label}">${pInfo.icon} <span class="badge-text">${pInfo.label}</span></div>`;
 
-            cardEl.style.backgroundImage = `url('${bgImage}')`;
-            cardEl.style.backgroundSize = 'cover';
-            cardEl.style.backgroundPosition = 'center';
-
+            // Refactored to use IMG tag for automatic fallback
             cardEl.innerHTML = `
+                <div class="card-bg-container">
+                    <img src="${bgImage}" class="card-bg" alt="${ep.name}" onerror="this.onerror=null;this.src='${fallbackImage}';">
+                    <div class="card-overlay"></div>
+                </div>
                 <div class="card-body" style="text-align: center; padding: 2rem; height: 100%; display: flex; flex-direction: column; justify-content: flex-end;">
-                    <div style="flex-grow: 1;"></div>
+                    <div style="flex-grow: 1;">
+                         <div class="priority-badge ${pInfo.class}" title="${pInfo.label}">${pInfo.icon} <span class="badge-text">${pInfo.label}</span></div>
+                    </div>
                     <span class="card-category" style="margin-bottom:0.5rem; display:block; color:var(--accent-gold); font-size:0.8rem; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">${ep.era}</span>
                     <h3 class="card-title" style="font-size: 1.4rem; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">${ep.name}</h3>
                     
@@ -282,10 +283,12 @@ document.addEventListener('DOMContentLoaded', () => {
         void activeCardEl.offsetWidth;
 
         const bgImage = getEpisodeImage(currentEpisode);
-        activeCardEl.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('${bgImage}')`;
-        activeCardEl.style.backgroundSize = 'cover';
-        activeCardEl.style.backgroundPosition = 'center';
+        const fallbackImage = getEraImage(currentEpisode.era);
 
+        // Remove old inline styles
+        activeCardEl.style.backgroundImage = 'none';
+
+        // Set class for animation logic (kept from previous code)
         if (direction === 'next') {
             activeCardEl.classList.add('slide-in-right');
         } else if (direction === 'prev') {
@@ -295,6 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         activeCardEl.innerHTML = `
+            <img src="${bgImage}" class="player-card-bg" alt="${currentEpisode.name}" onerror="this.onerror=null;this.src='${fallbackImage}';">
             <div class="player-card-content">
                 <h2>${card.content}</h2>
                 <div class="card-tags" style="justify-content: center; margin-top:1rem;">
