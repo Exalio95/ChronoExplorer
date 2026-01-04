@@ -98,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.getElementById('nextCard');
     const prevBtn = document.getElementById('prevCard');
     const closePlayerBtn = document.getElementById('closePlayer');
+    const playerBgImage = document.getElementById('playerBackgroundImage');
 
     // State
     let currentEpisode = null;
@@ -290,10 +291,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const bgImage = getEpisodeImage(currentEpisode);
         const fallbackImage = getEraImage(currentEpisode.era);
 
-        // Remove old inline styles
-        activeCardEl.style.backgroundImage = 'none';
+        // Update Fullscreen Background
+        if (playerBgImage) {
+            playerBgImage.src = bgImage;
+            playerBgImage.onerror = () => {
+                playerBgImage.src = fallbackImage;
+                playerBgImage.onerror = null; // Prevent infinite loop
+            };
+        }
 
-        // Set class for animation logic (kept from previous code)
+        // Set class for animation logic
         if (direction === 'next') {
             activeCardEl.classList.add('slide-in-right');
         } else if (direction === 'prev') {
@@ -302,8 +309,8 @@ document.addEventListener('DOMContentLoaded', () => {
             activeCardEl.classList.add('slide-in');
         }
 
+        // Render Card Content (Title, Detail, Tags) - No Image inside card anymore
         activeCardEl.innerHTML = `
-            <img src="${bgImage}" class="player-card-bg" alt="${currentEpisode.name}" onerror="this.onerror=null;this.src='${fallbackImage}';">
             <div class="player-card-content">
                 <h2>${card.content}</h2>
                 <div class="card-tags" style="justify-content: center; margin-top:1rem;">
@@ -331,6 +338,24 @@ document.addEventListener('DOMContentLoaded', () => {
             updatePlayerUI('prev');
         }
     };
+
+    // Tap to Navigate (Left/Right zones)
+    playerOverlay.addEventListener('click', (e) => {
+        // Ignore if clicking on interactive elements
+        if (e.target.closest('button') || e.target.closest('.player-card')) return;
+
+        const width = window.innerWidth;
+        const x = e.clientX;
+
+        // Left 30% -> Prev
+        if (x < width * 0.3) {
+            prevCard();
+        }
+        // Right 30% -> Next
+        else if (x > width * 0.7) {
+            nextCard();
+        }
+    });
 
     const closePlayer = () => {
         playerOverlay.classList.add('hidden');
