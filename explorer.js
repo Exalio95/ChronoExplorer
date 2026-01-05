@@ -189,19 +189,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Helper: Get Episode Image Path
     const getEpisodeImage = (ep) => {
-        return `img_ep_${ep.id}.png`;
+        return `images/img_ep_${ep.id}.png`;
     };
 
     // Helper: Get Era Fallback Image
     const getEraImage = (era) => {
         const eraImages = {
-            "Préhistoire": "img_era_prehistory.png",
-            "Antiquité": "img_era_antiquity.png",
-            "Moyen Âge": "img_era_middleages.png",
-            "Temps Modernes": "img_era_modern.png",
-            "Époque Contemporaine": "img_era_contemporary.png"
+            "Préhistoire": "images/img_era_prehistory.png",
+            "Antiquité": "images/img_era_antiquity.png",
+            "Moyen Âge": "images/img_era_middleages.png",
+            "Temps Modernes": "images/img_era_modern.png",
+            "Époque Contemporaine": "images/img_era_contemporary.png"
         };
-        return eraImages[era] || "img_era_antiquity.png";
+        return eraImages[era] || "images/img_era_antiquity.png";
     };
 
     // 3b. Render Episodes Grid
