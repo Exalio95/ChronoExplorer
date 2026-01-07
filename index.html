@@ -28,6 +28,12 @@
         <div class="stats-badge">
             <span id="cardCount">0</span> Cartes
         </div>
+        <div id="userProfile" class="user-profile">
+            <button id="headerLoginBtn" class="btn-glass-small"
+                onclick="document.getElementById('loginModal').classList.remove('hidden')">
+                <i class="fa-brands fa-google"></i> Connexion
+            </button>
+        </div>
     </header>
 
     <div class="app-layout">
@@ -84,11 +90,46 @@
         </main>
     </div>
 
-    <!-- Detail Modal (Keep for individual card view if needed, or remove? Let's keep for search results) -->
     <div id="cardModal" class="modal hidden">
         <div class="modal-content glass-panel">
             <span class="close-modal">&times;</span>
             <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal hidden" style="z-index: 2000;">
+        <div class="modal-content glass-panel" style="max-width: 400px; text-align: center;">
+            <h2 style="margin-bottom: 1rem;">Bienvenue Explorateur !</h2>
+            <p style="margin-bottom: 2rem;">Connectez-vous pour sauvegarder votre progression et retrouver vos épisodes
+                vus.</p>
+
+            <button onclick="auth.signInWithGoogle()" class="btn-google"
+                style="margin-bottom: 1rem; width: 100%; padding: 1rem; border-radius: 12px; border: none; background: white; color: #333; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <i class="fa-brands fa-google" style="color: #4285F4;"></i> Continuer avec Google
+            </button>
+
+            <button
+                onclick="document.getElementById('loginModal').classList.add('hidden'); localStorage.setItem('auth_refused', 'true');"
+                class="btn-text" style="color: rgba(255,255,255,0.6);">
+                Non merci, je visiterai en invité
+            </button>
+        </div>
+    </div>
+
+    <!-- Pseudo Modal -->
+    <div id="pseudoModal" class="modal hidden" style="z-index: 2100;">
+        <div class="modal-content glass-panel" style="max-width: 400px; text-align: center;">
+            <h2 style="margin-bottom: 1rem; color: var(--accent-gold);">Choisissez votre nom d'explorateur</h2>
+            <p style="margin-bottom: 1.5rem; color: #ccc;">Comment voulez-vous qu'on vous appelle ?</p>
+
+            <input type="text" id="pseudoInput" placeholder="Votre pseudo..."
+                style="width: 100%; padding: 1rem; margin-bottom: 1.5rem; background: rgba(0,0,0,0.3); border: 1px solid var(--accent-blue); color: white; border-radius: 8px; font-size: 1.1rem;">
+
+            <button onclick="auth.savePseudo()" class="btn-google"
+                style="width: 100%; padding: 1rem; border-radius: 12px; background: var(--accent-gold); color: black; font-weight: bold; border: none; cursor: pointer;">
+                C'est parti !
+            </button>
         </div>
     </div>
 
@@ -216,451 +257,7 @@
     <script src="data/data_episode_87_confucius.js"></script>
     <script src="data/data_episode_88_parthenon.js"></script>
     <script src="data/data_episode_89_socrate.js"></script>
-    <!-- Gap Fillers Batch 1 -->
-    <script src="data/data_episode_1_sortie_afrique.js"></script>
-    <script src="data/data_episode_2_lascaux.js"></script>
-    <script src="data/data_episode_3_rome.js"></script>
-    <script src="data/data_episode_4_neolithique.js"></script>
-    <script src="data/data_episode_5_ecriture_uruk.js"></script>
-    <script src="data/data_episode_6_pyramides.js"></script>
-    <script src="data/data_episode_7_hammurabi.js"></script>
-    <script src="data/data_episode_8_toutankhamon.js"></script>
-    <script src="data/data_episode_9_salamine.js"></script>
-    <script src="data/data_episode_11_alexandre.js"></script>
-    <script src="data/data_episode_12_chine_qin.js"></script>
-    <script src="data/data_episode_13_cesar.js"></script>
-    <script src="data/data_episode_14_auguste.js"></script>
-    <script src="data/data_episode_15_jesus.js"></script>
-    <script src="data/data_episode_16_temple_70.js"></script>
-    <script src="data/data_episode_17_pompei.js"></script>
-    <script src="data/data_episode_18_constantin.js"></script>
-    <script src="data/data_episode_19_alaric.js"></script>
-    <script src="data/data_episode_20_chute_rome.js"></script>
-    <script src="data/data_episode_21_hegire.js"></script>
-    <script src="data/data_episode_22_poitiers_732.js"></script>
-    <script src="data/data_episode_23_charlemagne.js"></script>
-    <script src="data/data_episode_24_hastings_1066.js"></script>
-    <script src="data/data_episode_25_croisades_1099.js"></script>
-    <script src="data/data_episode_26_constantinople_1204.js"></script>
-    <script src="data/data_episode_27_bagdad_1258.js"></script>
-    <script src="data/data_episode_28_peste_noire.js"></script>
-    <script src="data/data_episode_29_chute_const_1453.js"></script>
-    <script src="data/data_episode_30_gutenberg_1455.js"></script>
-    <script src="data/data_episode_31_colomb_1492.js"></script>
-    <script src="data/data_episode_32_luther_1517.js"></script>
-    <script src="data/data_episode_33_magellan_1519.js"></script>
-    <script src="data/data_episode_34_cortes_1521.js"></script>
-    <script src="data/data_episode_35_copernic.js"></script>
-    <script src="data/data_episode_36_galilee.js"></script>
-    <script src="data/data_episode_37_taj_mahal.js"></script>
-    <script src="data/data_episode_38_encyclopedie.js"></script>
-    <script src="data/data_episode_39_watt_1769.js"></script>
-    <script src="data/data_episode_40_independence_1776.js"></script>
-    <script src="data/data_episode_41_bastille_1789.js"></script>
-    <script src="data/data_episode_42_haiti_1791.js"></script>
-    <script src="data/data_episode_43_rosette_1799.js"></script>
-    <script src="data/data_episode_44_napoleon_1804.js"></script>
-    <script src="data/data_episode_45_vienne_1815.js"></script>
-    <script src="data/data_episode_46_champollion_1821.js"></script>
-    <script src="data/data_episode_47_train_1830.js"></script>
-    <script src="data/data_episode_48_delacroix_1830.js"></script>
-    <script src="data/data_episode_49_abolition_1848.js"></script>
-    <script src="data/data_episode_50_darwin_1859.js"></script>
-    <script src="data/data_episode_51_secession_1861.js"></script>
-    <script src="data/data_episode_52_meiji_1868.js"></script>
-    <script src="data/data_episode_53_suez_1869.js"></script>
-    <script src="data/data_episode_54_berlin_1884.js"></script>
-    <script src="data/data_episode_55_pasteur_1885.js"></script>
-    <script src="data/data_episode_56_eiffel_1889.js"></script>
-    <script src="data/data_episode_57_dreyfus_1894.js"></script>
-    <script src="data/data_episode_58_cinema_1895.js"></script>
-    <script src="data/data_episode_59_wright_1903.js"></script>
-    <script src="data/data_episode_60_einstein_1905.js"></script>
-    <script src="data/data_episode_61_laicite_1905.js"></script>
-    <script src="data/data_episode_62_jomon.js"></script>
-    <script src="data/data_episode_63_holocene.js"></script>
-    <script src="data/data_episode_64_gobekli.js"></script>
-    <script src="data/data_episode_65_doggerland.js"></script>
-    <script src="data/data_episode_66_caral_supe.js"></script>
-    <script src="data/data_episode_67_otzi.js"></script>
-    <script src="data/data_episode_68_narmer.js"></script>
-    <script src="data/data_episode_69_mohenjo_daro.js"></script>
-    <script src="data/data_episode_70_etendard_ur.js"></script>
-    <script src="data/data_episode_71_gilgamesh.js"></script>
-    <script src="data/data_episode_72_bantous.js"></script>
-    <script src="data/data_episode_73_phaistos.js"></script>
-    <script src="data/data_episode_74_santorin.js"></script>
-    <script src="data/data_episode_75_qadesh.js"></script>
-    <script src="data/data_episode_76_effondrement_bronze.js"></script>
-    <script src="data/data_episode_77_olmeques.js"></script>
-    <script src="data/data_episode_78_austronesie.js"></script>
-    <script src="data/data_episode_79_assurbanipal.js"></script>
-    <script src="data/data_episode_80_jimmu.js"></script>
-    <script src="data/data_episode_81_ninive.js"></script>
-    <script src="data/data_episode_82_temple_salomon.js"></script>
-    <script src="data/data_episode_83_cyrus.js"></script>
-    <script src="data/data_episode_84_republique_rome.js"></script>
-    <script src="data/data_episode_85_marathon.js"></script>
-    <script src="data/data_episode_86_buddha.js"></script>
-    <script src="data/data_episode_87_confucius.js"></script>
-    <script src="data/data_episode_88_parthenon.js"></script>
-    <script src="data/data_episode_89_socrate.js"></script>
-    <!-- Gap Fillers Batch 2 -->
-    <script src="data/data_episode_1_sortie_afrique.js"></script>
-    <script src="data/data_episode_2_lascaux.js"></script>
-    <script src="data/data_episode_3_rome.js"></script>
-    <script src="data/data_episode_4_neolithique.js"></script>
-    <script src="data/data_episode_5_ecriture_uruk.js"></script>
-    <script src="data/data_episode_6_pyramides.js"></script>
-    <script src="data/data_episode_7_hammurabi.js"></script>
-    <script src="data/data_episode_8_toutankhamon.js"></script>
-    <script src="data/data_episode_9_salamine.js"></script>
-    <script src="data/data_episode_11_alexandre.js"></script>
-    <script src="data/data_episode_12_chine_qin.js"></script>
-    <script src="data/data_episode_13_cesar.js"></script>
-    <script src="data/data_episode_14_auguste.js"></script>
-    <script src="data/data_episode_15_jesus.js"></script>
-    <script src="data/data_episode_16_temple_70.js"></script>
-    <script src="data/data_episode_17_pompei.js"></script>
-    <script src="data/data_episode_18_constantin.js"></script>
-    <script src="data/data_episode_19_alaric.js"></script>
-    <script src="data/data_episode_20_chute_rome.js"></script>
-    <script src="data/data_episode_21_hegire.js"></script>
-    <script src="data/data_episode_22_poitiers_732.js"></script>
-    <script src="data/data_episode_23_charlemagne.js"></script>
-    <script src="data/data_episode_24_hastings_1066.js"></script>
-    <script src="data/data_episode_25_croisades_1099.js"></script>
-    <script src="data/data_episode_26_constantinople_1204.js"></script>
-    <script src="data/data_episode_27_bagdad_1258.js"></script>
-    <script src="data/data_episode_28_peste_noire.js"></script>
-    <script src="data/data_episode_29_chute_const_1453.js"></script>
-    <script src="data/data_episode_30_gutenberg_1455.js"></script>
-    <script src="data/data_episode_31_colomb_1492.js"></script>
-    <script src="data/data_episode_32_luther_1517.js"></script>
-    <script src="data/data_episode_33_magellan_1519.js"></script>
-    <script src="data/data_episode_34_cortes_1521.js"></script>
-    <script src="data/data_episode_35_copernic.js"></script>
-    <script src="data/data_episode_36_galilee.js"></script>
-    <script src="data/data_episode_37_taj_mahal.js"></script>
-    <script src="data/data_episode_38_encyclopedie.js"></script>
-    <script src="data/data_episode_39_watt_1769.js"></script>
-    <script src="data/data_episode_40_independence_1776.js"></script>
-    <script src="data/data_episode_41_bastille_1789.js"></script>
-    <script src="data/data_episode_42_haiti_1791.js"></script>
-    <script src="data/data_episode_43_rosette_1799.js"></script>
-    <script src="data/data_episode_44_napoleon_1804.js"></script>
-    <script src="data/data_episode_45_vienne_1815.js"></script>
-    <script src="data/data_episode_46_champollion_1821.js"></script>
-    <script src="data/data_episode_47_train_1830.js"></script>
-    <script src="data/data_episode_48_delacroix_1830.js"></script>
-    <script src="data/data_episode_49_abolition_1848.js"></script>
-    <script src="data/data_episode_50_darwin_1859.js"></script>
-    <script src="data/data_episode_51_secession_1861.js"></script>
-    <script src="data/data_episode_52_meiji_1868.js"></script>
-    <script src="data/data_episode_53_suez_1869.js"></script>
-    <script src="data/data_episode_54_berlin_1884.js"></script>
-    <script src="data/data_episode_55_pasteur_1885.js"></script>
-    <script src="data/data_episode_56_eiffel_1889.js"></script>
-    <script src="data/data_episode_57_dreyfus_1894.js"></script>
-    <script src="data/data_episode_58_cinema_1895.js"></script>
-    <script src="data/data_episode_59_wright_1903.js"></script>
-    <script src="data/data_episode_60_einstein_1905.js"></script>
-    <script src="data/data_episode_61_laicite_1905.js"></script>
-    <script src="data/data_episode_62_jomon.js"></script>
-    <script src="data/data_episode_63_holocene.js"></script>
-    <script src="data/data_episode_64_gobekli.js"></script>
-    <script src="data/data_episode_65_doggerland.js"></script>
-    <script src="data/data_episode_66_caral_supe.js"></script>
-    <script src="data/data_episode_67_otzi.js"></script>
-    <script src="data/data_episode_68_narmer.js"></script>
-    <script src="data/data_episode_69_mohenjo_daro.js"></script>
-    <script src="data/data_episode_70_etendard_ur.js"></script>
-    <script src="data/data_episode_71_gilgamesh.js"></script>
-    <script src="data/data_episode_72_bantous.js"></script>
-    <script src="data/data_episode_73_phaistos.js"></script>
-    <script src="data/data_episode_74_santorin.js"></script>
-    <script src="data/data_episode_75_qadesh.js"></script>
-    <script src="data/data_episode_76_effondrement_bronze.js"></script>
-    <script src="data/data_episode_77_olmeques.js"></script>
-    <script src="data/data_episode_78_austronesie.js"></script>
-    <script src="data/data_episode_79_assurbanipal.js"></script>
-    <script src="data/data_episode_80_jimmu.js"></script>
-    <script src="data/data_episode_81_ninive.js"></script>
-    <script src="data/data_episode_82_temple_salomon.js"></script>
-    <script src="data/data_episode_83_cyrus.js"></script>
-    <script src="data/data_episode_84_republique_rome.js"></script>
-    <script src="data/data_episode_85_marathon.js"></script>
-    <script src="data/data_episode_86_buddha.js"></script>
-    <script src="data/data_episode_87_confucius.js"></script>
-    <script src="data/data_episode_88_parthenon.js"></script>
-    <script src="data/data_episode_89_socrate.js"></script>
-    <!-- Gap Fillers Batch 3 -->
-    <script src="data/data_episode_1_sortie_afrique.js"></script>
-    <script src="data/data_episode_2_lascaux.js"></script>
-    <script src="data/data_episode_3_rome.js"></script>
-    <script src="data/data_episode_4_neolithique.js"></script>
-    <script src="data/data_episode_5_ecriture_uruk.js"></script>
-    <script src="data/data_episode_6_pyramides.js"></script>
-    <script src="data/data_episode_7_hammurabi.js"></script>
-    <script src="data/data_episode_8_toutankhamon.js"></script>
-    <script src="data/data_episode_9_salamine.js"></script>
-    <script src="data/data_episode_11_alexandre.js"></script>
-    <script src="data/data_episode_12_chine_qin.js"></script>
-    <script src="data/data_episode_13_cesar.js"></script>
-    <script src="data/data_episode_14_auguste.js"></script>
-    <script src="data/data_episode_15_jesus.js"></script>
-    <script src="data/data_episode_16_temple_70.js"></script>
-    <script src="data/data_episode_17_pompei.js"></script>
-    <script src="data/data_episode_18_constantin.js"></script>
-    <script src="data/data_episode_19_alaric.js"></script>
-    <script src="data/data_episode_20_chute_rome.js"></script>
-    <script src="data/data_episode_21_hegire.js"></script>
-    <script src="data/data_episode_22_poitiers_732.js"></script>
-    <script src="data/data_episode_23_charlemagne.js"></script>
-    <script src="data/data_episode_24_hastings_1066.js"></script>
-    <script src="data/data_episode_25_croisades_1099.js"></script>
-    <script src="data/data_episode_26_constantinople_1204.js"></script>
-    <script src="data/data_episode_27_bagdad_1258.js"></script>
-    <script src="data/data_episode_28_peste_noire.js"></script>
-    <script src="data/data_episode_29_chute_const_1453.js"></script>
-    <script src="data/data_episode_30_gutenberg_1455.js"></script>
-    <script src="data/data_episode_31_colomb_1492.js"></script>
-    <script src="data/data_episode_32_luther_1517.js"></script>
-    <script src="data/data_episode_33_magellan_1519.js"></script>
-    <script src="data/data_episode_34_cortes_1521.js"></script>
-    <script src="data/data_episode_35_copernic.js"></script>
-    <script src="data/data_episode_36_galilee.js"></script>
-    <script src="data/data_episode_37_taj_mahal.js"></script>
-    <script src="data/data_episode_38_encyclopedie.js"></script>
-    <script src="data/data_episode_39_watt_1769.js"></script>
-    <script src="data/data_episode_40_independence_1776.js"></script>
-    <script src="data/data_episode_41_bastille_1789.js"></script>
-    <script src="data/data_episode_42_haiti_1791.js"></script>
-    <script src="data/data_episode_43_rosette_1799.js"></script>
-    <script src="data/data_episode_44_napoleon_1804.js"></script>
-    <script src="data/data_episode_45_vienne_1815.js"></script>
-    <script src="data/data_episode_46_champollion_1821.js"></script>
-    <script src="data/data_episode_47_train_1830.js"></script>
-    <script src="data/data_episode_48_delacroix_1830.js"></script>
-    <script src="data/data_episode_49_abolition_1848.js"></script>
-    <script src="data/data_episode_50_darwin_1859.js"></script>
-    <script src="data/data_episode_51_secession_1861.js"></script>
-    <script src="data/data_episode_52_meiji_1868.js"></script>
-    <script src="data/data_episode_53_suez_1869.js"></script>
-    <script src="data/data_episode_54_berlin_1884.js"></script>
-    <script src="data/data_episode_55_pasteur_1885.js"></script>
-    <script src="data/data_episode_56_eiffel_1889.js"></script>
-    <script src="data/data_episode_57_dreyfus_1894.js"></script>
-    <script src="data/data_episode_58_cinema_1895.js"></script>
-    <script src="data/data_episode_59_wright_1903.js"></script>
-    <script src="data/data_episode_60_einstein_1905.js"></script>
-    <script src="data/data_episode_61_laicite_1905.js"></script>
-    <script src="data/data_episode_62_jomon.js"></script>
-    <script src="data/data_episode_63_holocene.js"></script>
-    <script src="data/data_episode_64_gobekli.js"></script>
-    <script src="data/data_episode_65_doggerland.js"></script>
-    <script src="data/data_episode_66_caral_supe.js"></script>
-    <script src="data/data_episode_67_otzi.js"></script>
-    <script src="data/data_episode_68_narmer.js"></script>
-    <script src="data/data_episode_69_mohenjo_daro.js"></script>
-    <script src="data/data_episode_70_etendard_ur.js"></script>
-    <script src="data/data_episode_71_gilgamesh.js"></script>
-    <script src="data/data_episode_72_bantous.js"></script>
-    <script src="data/data_episode_73_phaistos.js"></script>
-    <script src="data/data_episode_74_santorin.js"></script>
-    <script src="data/data_episode_75_qadesh.js"></script>
-    <script src="data/data_episode_76_effondrement_bronze.js"></script>
-    <script src="data/data_episode_77_olmeques.js"></script>
-    <script src="data/data_episode_78_austronesie.js"></script>
-    <script src="data/data_episode_79_assurbanipal.js"></script>
-    <script src="data/data_episode_80_jimmu.js"></script>
-    <script src="data/data_episode_81_ninive.js"></script>
-    <script src="data/data_episode_82_temple_salomon.js"></script>
-    <script src="data/data_episode_83_cyrus.js"></script>
-    <script src="data/data_episode_84_republique_rome.js"></script>
-    <script src="data/data_episode_85_marathon.js"></script>
-    <script src="data/data_episode_86_buddha.js"></script>
-    <script src="data/data_episode_87_confucius.js"></script>
-    <script src="data/data_episode_88_parthenon.js"></script>
-    <script src="data/data_episode_89_socrate.js"></script>
-    <!-- Gap Fillers Batch 4 -->
-    <script src="data/data_episode_1_sortie_afrique.js"></script>
-    <script src="data/data_episode_2_lascaux.js"></script>
-    <script src="data/data_episode_3_rome.js"></script>
-    <script src="data/data_episode_4_neolithique.js"></script>
-    <script src="data/data_episode_5_ecriture_uruk.js"></script>
-    <script src="data/data_episode_6_pyramides.js"></script>
-    <script src="data/data_episode_7_hammurabi.js"></script>
-    <script src="data/data_episode_8_toutankhamon.js"></script>
-    <script src="data/data_episode_9_salamine.js"></script>
-    <script src="data/data_episode_11_alexandre.js"></script>
-    <script src="data/data_episode_12_chine_qin.js"></script>
-    <script src="data/data_episode_13_cesar.js"></script>
-    <script src="data/data_episode_14_auguste.js"></script>
-    <script src="data/data_episode_15_jesus.js"></script>
-    <script src="data/data_episode_16_temple_70.js"></script>
-    <script src="data/data_episode_17_pompei.js"></script>
-    <script src="data/data_episode_18_constantin.js"></script>
-    <script src="data/data_episode_19_alaric.js"></script>
-    <script src="data/data_episode_20_chute_rome.js"></script>
-    <script src="data/data_episode_21_hegire.js"></script>
-    <script src="data/data_episode_22_poitiers_732.js"></script>
-    <script src="data/data_episode_23_charlemagne.js"></script>
-    <script src="data/data_episode_24_hastings_1066.js"></script>
-    <script src="data/data_episode_25_croisades_1099.js"></script>
-    <script src="data/data_episode_26_constantinople_1204.js"></script>
-    <script src="data/data_episode_27_bagdad_1258.js"></script>
-    <script src="data/data_episode_28_peste_noire.js"></script>
-    <script src="data/data_episode_29_chute_const_1453.js"></script>
-    <script src="data/data_episode_30_gutenberg_1455.js"></script>
-    <script src="data/data_episode_31_colomb_1492.js"></script>
-    <script src="data/data_episode_32_luther_1517.js"></script>
-    <script src="data/data_episode_33_magellan_1519.js"></script>
-    <script src="data/data_episode_34_cortes_1521.js"></script>
-    <script src="data/data_episode_35_copernic.js"></script>
-    <script src="data/data_episode_36_galilee.js"></script>
-    <script src="data/data_episode_37_taj_mahal.js"></script>
-    <script src="data/data_episode_38_encyclopedie.js"></script>
-    <script src="data/data_episode_39_watt_1769.js"></script>
-    <script src="data/data_episode_40_independence_1776.js"></script>
-    <script src="data/data_episode_41_bastille_1789.js"></script>
-    <script src="data/data_episode_42_haiti_1791.js"></script>
-    <script src="data/data_episode_43_rosette_1799.js"></script>
-    <script src="data/data_episode_44_napoleon_1804.js"></script>
-    <script src="data/data_episode_45_vienne_1815.js"></script>
-    <script src="data/data_episode_46_champollion_1821.js"></script>
-    <script src="data/data_episode_47_train_1830.js"></script>
-    <script src="data/data_episode_48_delacroix_1830.js"></script>
-    <script src="data/data_episode_49_abolition_1848.js"></script>
-    <script src="data/data_episode_50_darwin_1859.js"></script>
-    <script src="data/data_episode_51_secession_1861.js"></script>
-    <script src="data/data_episode_52_meiji_1868.js"></script>
-    <script src="data/data_episode_53_suez_1869.js"></script>
-    <script src="data/data_episode_54_berlin_1884.js"></script>
-    <script src="data/data_episode_55_pasteur_1885.js"></script>
-    <script src="data/data_episode_56_eiffel_1889.js"></script>
-    <script src="data/data_episode_57_dreyfus_1894.js"></script>
-    <script src="data/data_episode_58_cinema_1895.js"></script>
-    <script src="data/data_episode_59_wright_1903.js"></script>
-    <script src="data/data_episode_60_einstein_1905.js"></script>
-    <script src="data/data_episode_61_laicite_1905.js"></script>
-    <script src="data/data_episode_62_jomon.js"></script>
-    <script src="data/data_episode_63_holocene.js"></script>
-    <script src="data/data_episode_64_gobekli.js"></script>
-    <script src="data/data_episode_65_doggerland.js"></script>
-    <script src="data/data_episode_66_caral_supe.js"></script>
-    <script src="data/data_episode_67_otzi.js"></script>
-    <script src="data/data_episode_68_narmer.js"></script>
-    <script src="data/data_episode_69_mohenjo_daro.js"></script>
-    <script src="data/data_episode_70_etendard_ur.js"></script>
-    <script src="data/data_episode_71_gilgamesh.js"></script>
-    <script src="data/data_episode_72_bantous.js"></script>
-    <script src="data/data_episode_73_phaistos.js"></script>
-    <script src="data/data_episode_74_santorin.js"></script>
-    <script src="data/data_episode_75_qadesh.js"></script>
-    <script src="data/data_episode_76_effondrement_bronze.js"></script>
-    <script src="data/data_episode_77_olmeques.js"></script>
-    <script src="data/data_episode_78_austronesie.js"></script>
-    <script src="data/data_episode_79_assurbanipal.js"></script>
-    <script src="data/data_episode_80_jimmu.js"></script>
-    <script src="data/data_episode_81_ninive.js"></script>
-    <script src="data/data_episode_82_temple_salomon.js"></script>
-    <script src="data/data_episode_83_cyrus.js"></script>
-    <script src="data/data_episode_84_republique_rome.js"></script>
-    <script src="data/data_episode_85_marathon.js"></script>
-    <script src="data/data_episode_86_buddha.js"></script>
-    <script src="data/data_episode_87_confucius.js"></script>
-    <script src="data/data_episode_88_parthenon.js"></script>
-    <script src="data/data_episode_89_socrate.js"></script>
-    <!-- Gap Fillers Batch 5 -->
-    <script src="data/data_episode_1_sortie_afrique.js"></script>
-    <script src="data/data_episode_2_lascaux.js"></script>
-    <script src="data/data_episode_3_rome.js"></script>
-    <script src="data/data_episode_4_neolithique.js"></script>
-    <script src="data/data_episode_5_ecriture_uruk.js"></script>
-    <script src="data/data_episode_6_pyramides.js"></script>
-    <script src="data/data_episode_7_hammurabi.js"></script>
-    <script src="data/data_episode_8_toutankhamon.js"></script>
-    <script src="data/data_episode_9_salamine.js"></script>
-    <script src="data/data_episode_11_alexandre.js"></script>
-    <script src="data/data_episode_12_chine_qin.js"></script>
-    <script src="data/data_episode_13_cesar.js"></script>
-    <script src="data/data_episode_14_auguste.js"></script>
-    <script src="data/data_episode_15_jesus.js"></script>
-    <script src="data/data_episode_16_temple_70.js"></script>
-    <script src="data/data_episode_17_pompei.js"></script>
-    <script src="data/data_episode_18_constantin.js"></script>
-    <script src="data/data_episode_19_alaric.js"></script>
-    <script src="data/data_episode_20_chute_rome.js"></script>
-    <script src="data/data_episode_21_hegire.js"></script>
-    <script src="data/data_episode_22_poitiers_732.js"></script>
-    <script src="data/data_episode_23_charlemagne.js"></script>
-    <script src="data/data_episode_24_hastings_1066.js"></script>
-    <script src="data/data_episode_25_croisades_1099.js"></script>
-    <script src="data/data_episode_26_constantinople_1204.js"></script>
-    <script src="data/data_episode_27_bagdad_1258.js"></script>
-    <script src="data/data_episode_28_peste_noire.js"></script>
-    <script src="data/data_episode_29_chute_const_1453.js"></script>
-    <script src="data/data_episode_30_gutenberg_1455.js"></script>
-    <script src="data/data_episode_31_colomb_1492.js"></script>
-    <script src="data/data_episode_32_luther_1517.js"></script>
-    <script src="data/data_episode_33_magellan_1519.js"></script>
-    <script src="data/data_episode_34_cortes_1521.js"></script>
-    <script src="data/data_episode_35_copernic.js"></script>
-    <script src="data/data_episode_36_galilee.js"></script>
-    <script src="data/data_episode_37_taj_mahal.js"></script>
-    <script src="data/data_episode_38_encyclopedie.js"></script>
-    <script src="data/data_episode_39_watt_1769.js"></script>
-    <script src="data/data_episode_40_independence_1776.js"></script>
-    <script src="data/data_episode_41_bastille_1789.js"></script>
-    <script src="data/data_episode_42_haiti_1791.js"></script>
-    <script src="data/data_episode_43_rosette_1799.js"></script>
-    <script src="data/data_episode_44_napoleon_1804.js"></script>
-    <script src="data/data_episode_45_vienne_1815.js"></script>
-    <script src="data/data_episode_46_champollion_1821.js"></script>
-    <script src="data/data_episode_47_train_1830.js"></script>
-    <script src="data/data_episode_48_delacroix_1830.js"></script>
-    <script src="data/data_episode_49_abolition_1848.js"></script>
-    <script src="data/data_episode_50_darwin_1859.js"></script>
-    <script src="data/data_episode_51_secession_1861.js"></script>
-    <script src="data/data_episode_52_meiji_1868.js"></script>
-    <script src="data/data_episode_53_suez_1869.js"></script>
-    <script src="data/data_episode_54_berlin_1884.js"></script>
-    <script src="data/data_episode_55_pasteur_1885.js"></script>
-    <script src="data/data_episode_56_eiffel_1889.js"></script>
-    <script src="data/data_episode_57_dreyfus_1894.js"></script>
-    <script src="data/data_episode_58_cinema_1895.js"></script>
-    <script src="data/data_episode_59_wright_1903.js"></script>
-    <script src="data/data_episode_60_einstein_1905.js"></script>
-    <script src="data/data_episode_61_laicite_1905.js"></script>
-    <script src="data/data_episode_62_jomon.js"></script>
-    <script src="data/data_episode_63_holocene.js"></script>
-    <script src="data/data_episode_64_gobekli.js"></script>
-    <script src="data/data_episode_65_doggerland.js"></script>
-    <script src="data/data_episode_66_caral_supe.js"></script>
-    <script src="data/data_episode_67_otzi.js"></script>
-    <script src="data/data_episode_68_narmer.js"></script>
-    <script src="data/data_episode_69_mohenjo_daro.js"></script>
-    <script src="data/data_episode_70_etendard_ur.js"></script>
-    <script src="data/data_episode_71_gilgamesh.js"></script>
-    <script src="data/data_episode_72_bantous.js"></script>
-    <script src="data/data_episode_73_phaistos.js"></script>
-    <script src="data/data_episode_74_santorin.js"></script>
-    <script src="data/data_episode_75_qadesh.js"></script>
-    <script src="data/data_episode_76_effondrement_bronze.js"></script>
-    <script src="data/data_episode_77_olmeques.js"></script>
-    <script src="data/data_episode_78_austronesie.js"></script>
-    <script src="data/data_episode_79_assurbanipal.js"></script>
-    <script src="data/data_episode_80_jimmu.js"></script>
-    <script src="data/data_episode_81_ninive.js"></script>
-    <script src="data/data_episode_82_temple_salomon.js"></script>
-    <script src="data/data_episode_83_cyrus.js"></script>
-    <script src="data/data_episode_84_republique_rome.js"></script>
-    <script src="data/data_episode_85_marathon.js"></script>
-    <script src="data/data_episode_86_buddha.js"></script>
-    <script src="data/data_episode_87_confucius.js"></script>
-    <script src="data/data_episode_88_parthenon.js"></script>
-    <script src="data/data_episode_89_socrate.js"></script>
+    <!-- Gap Fillers Batch 6 (Antiquity) -->
     <!-- Gap Fillers Batch 6 (Antiquity) -->
     <script src="data/data_episode_90_bibliotheque.js"></script>
     <script src="data/data_episode_91_ashoka.js"></script>
@@ -715,6 +312,15 @@
     <!-- Main Data Aggregator (Must be loaded LAST) -->
     <script src="data/generated_priorities.js"></script>
     <script src="data/data_episodes.js"></script>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+    <!-- App Configuration & Auth -->
+    <script src="firebase-config.js"></script>
+    <script src="auth.js"></script>
 
     <!-- App Logic -->
     <script src="explorer.js"></script>

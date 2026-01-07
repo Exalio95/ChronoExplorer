@@ -232,6 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
         filtered.forEach((ep, index) => {
             const cardEl = document.createElement('div');
             cardEl.className = 'card-item';
+            cardEl.dataset.id = ep.id;
             // Custom animation removed for performance
             // cardEl.style.animationDelay = `${index * 50}ms`;
 
@@ -272,6 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Player Logic (Same as before)
     const startEpisode = (episode) => {
         currentEpisode = episode;
+        if (window.auth) window.auth.markEpisodeAsSeen(episode.id);
         currentCardIndex = 0;
         updatePlayerUI('default');
         playerOverlay.classList.remove('hidden');
@@ -428,4 +430,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial Render
     renderFilters();
     renderEpisodes();
+
+    // Check Login Modal
+    setTimeout(() => {
+        if (!localStorage.getItem('auth_refused') && (!firebase.auth().currentUser)) {
+            const m = document.getElementById('loginModal');
+            if (m) m.classList.remove('hidden');
+        }
+    }, 1500);
 });
