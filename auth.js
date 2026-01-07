@@ -269,35 +269,63 @@ window.auth = {
     signOut,
     markEpisodeAsSeen,
     savePseudo,
-    fetchLeaderboard
+    fetchLeaderboard,
+    switchLeaderboard
 };
 
-const fetchLeaderboard = () => {
+let currentLeaderboardMode = 'daily';
+
+function switchLeaderboard(mode) {
+    currentLeaderboardMode = mode;
+
+    // Update buttons UI
+    const btnDaily = document.getElementById('btnDaily');
+    const btnAllTime = document.getElementById('btnAllTime');
+
+    if (mode === 'daily') {
+        btnDaily.style.background = 'var(--accent-gold)';
+        btnDaily.style.color = 'black';
+        btnAllTime.style.background = '';
+        btnAllTime.style.color = '';
+    } else {
+        btnAllTime.style.background = 'var(--accent-gold)';
+        btnAllTime.style.color = 'black';
+        btnDaily.style.background = '';
+        btnDaily.style.color = '';
+    }
+
+    fetchLeaderboard();
+}
+
+// Function declaration needs to match the export above if we hoist, 
+// but since we assigned to window.auth, we just need the function defined.
+function fetchLeaderboard() {
     const list = document.getElementById('leaderboardList');
     list.innerHTML = '<p style="text-align:center; color:#888;">Chargement des données...</p>';
 
-    // Query users sorted by dailyReads (desc)
-    // Note: This requires a composite index in Firestore if we filter by date too.
-    // For simplicity, we just order by dailyReads and filter locally if needed, or rely on daily reset.
-    // Since we reset dailyReads on write, we can just sort by dailyReads.
+    let query;
+    const isDaily = currentLeaderboardMode === 'daily';
 
-    // Important: We need to filter only users active TODAY ? 
-    // Or we assume dailyReads is accurate because it resets on first write of the day.
-    // Ideally we query: where('lastActivityDate', '==', today).orderBy('dailyReads', 'desc')
+    if (isDaily) {
+        const today = new Date().toISOString().split('T')[0];
+        query = window.db.collection('users')
+            .where('lastActivityDate', '==', today)
+            .orderBy('dailyReads', 'desc')
+            .limit(10);
+    } else {
+        // All Time: Order by totalReads
+        query = window.db.collection('users')
+            .orderBy('totalReads', 'desc')
+            .limit(10);
+    }
 
-    const today = new Date().toISOString().split('T')[0];
-
-    window.db.collection('users')
-        .where('lastActivityDate', '==', today)
-        .orderBy('dailyReads', 'desc')
-        .limit(10)
-        .get()
+    query.get()
         .then((snapshot) => {
             let html = '<ul style="list-style:none; padding:0;">';
             let rank = 1;
 
             if (snapshot.empty) {
-                list.innerHTML = '<p style="text-align:center; color:#888;">Aucun lecteur actif aujourd\'hui ! Soyez le premier.</p>';
+                list.innerHTML = '<p style="text-align:center; color:#888;">Aucun classement pour le moment.</p>';
                 return;
             }
 
@@ -309,15 +337,18 @@ const fetchLeaderboard = () => {
                 else if (rank === 3) badge = '🥉';
                 else badge = `#${rank}`;
 
+                // Score to display
+                const scoreDisplay = isDaily ? `${data.dailyReads || 0} 📖` : `${data.totalReads || 0} 🏆`;
+
                 html += `
                     <li style="display:flex; justify-content:space-between; padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); align-items:center;">
                         <span style="font-weight:bold; font-size:1.1rem; width: 40px;">${badge}</span>
                         <div style="flex-grow:1;">
                             <span style="color: var(--accent-gold); font-weight:bold;">${data.pseudo || 'Explorateur'}</span>
-                            <div style="font-size:0.8rem; color:#aaa;">Total: ${data.totalReads || 0} épisodes</div>
+                             ${isDaily ? `<div style="font-size:0.8rem; color:#aaa;">Total: ${data.totalReads || 0} épisodes</div>` : ''}
                         </div>
                         <span style="background: rgba(255,255,255,0.1); padding: 5px 10px; border-radius: 10px; font-weight:bold;">
-                            ${data.dailyReads} 📖
+                            ${scoreDisplay}
                         </span>
                     </li>
                 `;
@@ -328,6 +359,6 @@ const fetchLeaderboard = () => {
         })
         .catch((error) => {
             console.error("Erreur leaderboard:", error);
-            list.innerHTML = `<p style="color:red; text-align:center;">Erreur : ${error.message}<br><small>Vérifiez que l'index Firestore existe (lien dans la console JS)</small></p>`;
+            list.innerHTML = `<p style="color:red; text-align:center;">Erreur : ${error.message}<br><small>Si "Index" requis : voir console</small></p>`;
         });
 };

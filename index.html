@@ -137,10 +137,17 @@
     <div id="leaderboardModal" class="modal hidden" style="z-index: 2200;">
         <div class="modal-content glass-panel" style="max-width: 500px; text-align: center;">
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1rem;">
-                <h2 style="color: var(--accent-gold); margin:0;"><i class="fa-solid fa-trophy"></i> Top Explorateurs du
-                    Jour</h2>
+                <h2 style="color: var(--accent-gold); margin:0;"><i class="fa-solid fa-trophy"></i> Top Explorateurs
+                </h2>
                 <button onclick="document.getElementById('leaderboardModal').classList.add('hidden')"
                     class="btn-icon"><i class="fa-solid fa-times"></i></button>
+            </div>
+
+            <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 1rem;">
+                <button id="btnDaily" onclick="auth.switchLeaderboard('daily')" class="btn-glass-small"
+                    style="background: var(--accent-gold); color: black;">Aujourd'hui</button>
+                <button id="btnAllTime" onclick="auth.switchLeaderboard('total')" class="btn-glass-small">Tout les
+                    temps</button>
             </div>
 
             <div id="leaderboardList" style="text-align: left; max-height: 400px; overflow-y: auto;">
