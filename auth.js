@@ -47,8 +47,19 @@ const checkAndPromptPseudo = (user) => {
             updateUserUI(user, doc.data().pseudo);
         } else {
             // No pseudo, show modal
+            console.log("No pseudo found, showing modal");
             document.getElementById('pseudoModal').classList.remove('hidden');
         }
+    }).catch((error) => {
+        console.error("Erreur accès profil:", error);
+        // If permission denied (common on new projects), show modal anyway or alert
+        if (error.code === 'permission-denied') {
+            alert("Attention : Vos règles de sécurité Firestore bloquent l'accès. Le pseudo ne pourra pas être sauvegardé.");
+        } else {
+            alert("Erreur profil : " + error.message);
+        }
+        // Force show modal just in case to verify UI works
+        document.getElementById('pseudoModal').classList.remove('hidden');
     });
 };
 
@@ -106,9 +117,19 @@ const updateUserUI = (user, pseudo = null) => {
                 <span style="font-weight: bold;">${displayName}</span>
             </div>
             <img src="${user.photoURL}" alt="${displayName}" class="user-avatar" title="${displayName}">
-            <button id="logoutBtn" class="btn-text" style="font-size: 0.8rem; margin-left:10px;">X</button>
+            
+            <button id="showLeaderboardBtn" class="btn-icon" style="margin-left:10px;" title="Leaderboard">
+                <i class="fa-solid fa-trophy" style="color: var(--accent-gold);"></i>
+            </button>
+            <button id="logoutBtn" class="btn-icon" style="margin-left:5px; background: rgba(255,255,255,0.1);" title="Déconnexion">
+                <i class="fa-solid fa-power-off"></i>
+            </button>
         `;
         document.getElementById('logoutBtn').addEventListener('click', signOut);
+        document.getElementById('showLeaderboardBtn').addEventListener('click', () => {
+            document.getElementById('leaderboardModal').classList.remove('hidden');
+            fetchLeaderboard();
+        });
 
         // Cacher le bouton de connexion s'il existe ailleurs
         const loginBtn = document.getElementById('headerLoginBtn');
@@ -160,10 +181,29 @@ const markEpisodeAsSeen = (episodeId) => {
 
     // Sauvegarde
     if (currentUser) {
-        // Cloud
-        getUserDocRef(currentUser.uid).set({
-            seenEpisodes: Array.from(userHistory)
-        }, { merge: true });
+        // Update local stats first to be responsive
+        const today = new Date().toISOString().split('T')[0];
+
+        getUserDocRef(currentUser.uid).get().then((doc) => {
+            if (doc.exists) {
+                const data = doc.data();
+                let dailyReads = data.dailyReads || 0;
+                let lastDate = data.lastActivityDate || "";
+
+                if (lastDate !== today) {
+                    dailyReads = 1; // Reset for new day
+                } else {
+                    dailyReads += 1;
+                }
+
+                getUserDocRef(currentUser.uid).set({
+                    seenEpisodes: Array.from(userHistory),
+                    dailyReads: dailyReads,
+                    lastActivityDate: today,
+                    totalReads: userHistory.size
+                }, { merge: true });
+            }
+        });
     } else {
         // Local
         localStorage.setItem('chrono_seen_episodes', JSON.stringify(Array.from(userHistory)));
@@ -228,5 +268,66 @@ window.auth = {
     signInWithGoogle,
     signOut,
     markEpisodeAsSeen,
-    savePseudo
+    savePseudo,
+    fetchLeaderboard
+};
+
+const fetchLeaderboard = () => {
+    const list = document.getElementById('leaderboardList');
+    list.innerHTML = '<p style="text-align:center; color:#888;">Chargement des données...</p>';
+
+    // Query users sorted by dailyReads (desc)
+    // Note: This requires a composite index in Firestore if we filter by date too.
+    // For simplicity, we just order by dailyReads and filter locally if needed, or rely on daily reset.
+    // Since we reset dailyReads on write, we can just sort by dailyReads.
+
+    // Important: We need to filter only users active TODAY ? 
+    // Or we assume dailyReads is accurate because it resets on first write of the day.
+    // Ideally we query: where('lastActivityDate', '==', today).orderBy('dailyReads', 'desc')
+
+    const today = new Date().toISOString().split('T')[0];
+
+    window.db.collection('users')
+        .where('lastActivityDate', '==', today)
+        .orderBy('dailyReads', 'desc')
+        .limit(10)
+        .get()
+        .then((snapshot) => {
+            let html = '<ul style="list-style:none; padding:0;">';
+            let rank = 1;
+
+            if (snapshot.empty) {
+                list.innerHTML = '<p style="text-align:center; color:#888;">Aucun lecteur actif aujourd\'hui ! Soyez le premier.</p>';
+                return;
+            }
+
+            snapshot.forEach(doc => {
+                const data = doc.data();
+                let badge = '';
+                if (rank === 1) badge = '🥇';
+                else if (rank === 2) badge = '🥈';
+                else if (rank === 3) badge = '🥉';
+                else badge = `#${rank}`;
+
+                html += `
+                    <li style="display:flex; justify-content:space-between; padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); align-items:center;">
+                        <span style="font-weight:bold; font-size:1.1rem; width: 40px;">${badge}</span>
+                        <div style="flex-grow:1;">
+                            <span style="color: var(--accent-gold); font-weight:bold;">${data.pseudo || 'Explorateur'}</span>
+                            <div style="font-size:0.8rem; color:#aaa;">Total: ${data.totalReads || 0} épisodes</div>
+                        </div>
+                        <span style="background: rgba(255,255,255,0.1); padding: 5px 10px; border-radius: 10px; font-weight:bold;">
+                            ${data.dailyReads} 📖
+                        </span>
+                    </li>
+                `;
+                rank++;
+            });
+            html += '</ul>';
+            list.innerHTML = html;
+        })
+        .catch((error) => {
+            console.error("Erreur leaderboard:", error);
+            list.innerHTML = `<p style="color:red; text-align:center;">Erreur : ${error.message}<br><small>Vérifiez que l'index Firestore existe (lien dans la console JS)</small></p>`;
+        });
 };
