@@ -1,4 +1,6 @@
 const episodeTitle_1 = "-60 000 : La sortie d'Afrique de l'Homo Sapiens";
+const episodeTitle_1_en = "-60,000: Out of Africa (Homo Sapiens)";
+
 const data_ep1 = [
     // --- ÉPISODE 1 : -60 000 LA SORTIE D'AFRIQUE ---
     {
@@ -7,7 +9,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "Nous sommes tous des Africains.",
+        content_en: "We are all Africans.",
         detail: "C'est un fait biologique établi : toute l'humanité actuelle (hors Afrique subsaharienne) descend d'un tout petit groupe d'Homo Sapiens (probablement quelques milliers d'individus) sorti d'Afrique de l'Est il y a environ 60 000 ans. Cela signifie que la diversité physique apparente (couleur de peau, forme des yeux) est extrêmement récente et superficielle à l'échelle de l'évolution. Un Inuit et un Aborigène d'Australie sont génétiquement plus proches que deux chimpanzés d'une même forêt.",
+        detail_en: "It is an established biological fact: all modern humanity (outside sub-Saharan Africa) descends from a very small group of Homo Sapiens (probably a few thousand individuals) that left East Africa about 60,000 years ago. This means that apparent physical diversity (skin color, eye shape) is extremely recent and superficial on an evolutionary scale. An Inuit and an Australian Aboriginal are genetically closer than two chimpanzees from the same forest.",
         priority: 1,
         tags: ["Génétique", "Origine"]
     },
@@ -17,7 +21,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "Ce n'était pas la première fois.",
+        content_en: "It wasn't the first time.",
         detail: "Sapiens n'est pas le premier explorateur. D'autres espèces humaines comme Homo Erectus étaient sorties d'Afrique bien avant, il y a près de 2 millions d'années, colonisant l'Asie (Homme de Pékin) et l'Europe. Une première vague de Sapiens avait même tenté sa chance vers -100 000 au Moyen-Orient (grottes de Qafzeh), mais elle a échoué et disparu. La sortie de -60 000 est celle qui a réussi : pour la première fois, une espèce humaine ne s'est pas contentée de migrer, elle a colonisé la totalité de la planète.",
+        detail_en: "Sapiens was not the first explorer. Other human species like Homo Erectus had left Africa long before, nearly 2 million years ago, colonizing Asia (Peking Man) and Europe. A first wave of Sapiens had even tried its luck around -100,000 in the Middle East (Qafzeh caves), but it failed and disappeared. The -60,000 exit is the one that succeeded: for the first time, a human species did not just migrate, it colonized the entire planet.",
         priority: 2,
         tags: ["Chronologie", "Espèces"]
     },
@@ -27,7 +33,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "Pourquoi sont-ils partis ?",
+        content_en: "Why did they leave?",
         detail: "Ce n'était pas une soif d'aventure, mais une nécessité vitale. Les carottages climatiques montrent qu'une méga-sécheresse a frappé l'Afrique de l'Est à cette époque. Le désert avançait. Les troupeaux de gibier migraient vers le Nord pour trouver de l'eau, et les chasseurs Sapiens les ont simplement suivis. Ce n'était pas une expédition planifiée, mais une migration lente, imperceptible : il suffisait d'avancer de quelques kilomètres par génération pour finir par traverser les continents.",
+        detail_en: "It wasn't a thirst for adventure, but a vital necessity. Climate core samples show that a mega-drought struck East Africa at that time. The desert was advancing. Game herds migrated North to find water, and Sapiens hunters simply followed them. It was not a planned expedition, but a slow, imperceptible migration: just moving a few kilometers per generation was enough to eventually cross continents.",
         priority: 1,
         tags: ["Climat", "Migration"]
     },
@@ -37,7 +45,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "La 'Porte des Larmes'.",
+        content_en: "The 'Gate of Tears'.",
         detail: "Comment sortir d'Afrique ? La route du Nord (Sinaï) était bloquée par un Sahara impénétrable. La voie royale fut le détroit de Bab-el-Mandeb ('La Porte des Larmes'), séparant l'actuel Djibouti du Yémen. En pleine ère glaciaire, le niveau des mers était 70 à 100 mètres plus bas qu'aujourd'hui. Le détroit était beaucoup plus étroit et parsemé d'îlots : une traversée possible à pied (à marée basse) ou avec de simples radeaux a permis à l'humanité de passer en Arabie.",
+        detail_en: "How to get out of Africa? The Northern route (Sinai) was blocked by an impenetrable Sahara. The royal road was the Bab-el-Mandeb strait ('The Gate of Tears'), separating present-day Djibouti from Yemen. In the middle of the Ice Age, sea levels were 70 to 100 meters lower than today. The strait was much narrower and dotted with islets: a crossing possible on foot (at low tide) or with simple rafts allowed humanity to pass into Arabia.",
         priority: 2,
         tags: ["Géographie", "Route"]
     },
@@ -47,7 +57,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "La rencontre charnelle avec Néandertal.",
+        content_en: "The intimate encounter with Neanderthal.",
         detail: "Pendant longtemps, on a cru que Sapiens avait simplement exterminé Néandertal. La génétique (Svante Pääbo, Nobel 2022) a prouvé le contraire. En arrivant au Moyen-Orient et en Europe, Sapiens a rencontré Néandertal et il y a euhybridation. Aujourd'hui, 1% à 3% du génome de tous les Eurasiatiques provient de Néandertal. Nous portons en nous la trace biologique de cette rencontre : des gènes liés à notre système immunitaire, à notre peau... et peut-être à certaines maladies (diabète, Crohn).",
+        detail_en: "For a long time, it was believed that Sapiens simply exterminated Neanderthal. Genetics (Svante Pääbo, Nobel 2022) proved otherwise. Arriving in the Middle East and Europe, Sapiens met Neanderthal and there was hybridization. Today, 1% to 3% of the genome of all Eurasians comes from Neanderthal. We carry the biological trace of this encounter: genes linked to our immune system, our skin... and perhaps certain diseases (diabetes, Crohn's).",
         priority: 1,
         tags: ["Rencontre", "Génétique"]
     },
@@ -57,7 +69,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "L'arme secrète de Sapiens : la couture ?",
+        content_en: "Sapiens' secret weapon: sewing?",
         detail: "Comment des Africains tropicaux ont-ils pu survivre dans l'Europe glaciaire ? L'invention décisive fut l'aiguille à chas en os. Elle permettait de coudre des vêtements ajustés, multicouches (fourrure à l'intérieur, cuir étanche à l'extérieur) et des bottes. Néandertal, lui, portait des peaux simplement nouées, moins isolantes thermiquement. Cette supériorité technologique, apparemment dérisoire, a permis à Sapiens d'occuper des niches écologiques plus froides et de chasser plus longtemps en hiver.",
+        detail_en: "How could tropical Africans survive in glacial Europe? The decisive invention was the bone eye needle. It allowed sewing fitted, multi-layered clothes (fur inside, waterproof leather outside) and boots. Neanderthal wore simply knotted skins, less thermally insulating. This seemingly trivial technological superiority allowed Sapiens to occupy colder ecological niches and hunt longer in winter.",
         priority: 3,
         tags: ["Objet", "Technique"]
     },
@@ -67,7 +81,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "Le 'Grand Bond en Avant' cognitif.",
+        content_en: "The Cognitive 'Great Leap Forward'.",
         detail: "Vers -70 000 / -60 000, quelque chose change radicalement. Sapiens commence à produire de l'art, des bijoux, des armes composites, et à enterrer ses morts avec des rites. Yuval Noah Harari appelle cela la 'Révolution Cognitive'. : une mutation génétique mineure aurait recâblé notre cerveau, nous donnant la capacité unique de parler de choses qui n'existent pas (mythes, dieux, esprits, nations). C'est ce 'ciment fictionnel' qui permet à Sapiens de coopérer en masse, là où les autres humains restaient limités aux liens du sang.",
+        detail_en: "Around -70,000 / -60,000, something changes radically. Sapiens begins to produce art, jewelry, composite weapons, and bury their dead with rites. Yuval Noah Harari calls this the 'Cognitive Revolution': a minor genetic mutation supposedly rewired our brain, giving us the unique ability to talk about things that do not exist (myths, gods, spirits, nations). It is this 'fictional cement' that allows Sapiens to cooperate in mass, where other humans remained limited to blood ties.",
         priority: 1,
         tags: ["Cerveau", "Culture"]
     },
@@ -77,7 +93,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "Une conquête éclair.",
+        content_en: "A lightning conquest.",
         detail: "Une fois la sortie réussie, la vitesse de dispersion est stupéfiante. En -50 000, Sapiens atteint l'Australie. En -45 000, il est en Europe de l'Ouest. En -15 000, il franchit le détroit de Béring pour entrer en Amérique. En quelques millénaires à peine, une espèce de primate africain s'est adaptée à tous les écosystèmes terrestres, de la jungle équatoriale aux déserts gélés de Sibérie. C'est l'espèce invasive ultime.",
+        detail_en: "Once the exit was successful, the speed of dispersal is staggering. In -50,000, Sapiens reaches Australia. In -45,000, they are in Western Europe. In -15,000, they cross the Bering Strait to enter America. In just a few millennia, an African primate species adapted to all terrestrial ecosystems, from the equatorial jungle to the frozen deserts of Siberia. It is the ultimate invasive species.",
         priority: 2,
         tags: ["Vitesse", "Expansion"]
     },
@@ -87,7 +105,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "Qui est l'Ève mitochondriale ?",
+        content_en: "Who is Mitochondrial Eve?",
         detail: "Ce n'est pas la première femme, ni la seule de son époque ! C'est le nom donné à la plus récente ancêtre commune par la lignée maternelle (ADN mitochondrial) de toute l'humanité actuelle. Elle vivait en Afrique il y a environ 150 000 à 200 000 ans. Toutes les autres lignées féminines de ses contemporaines se sont éteintes (elles n'ont eu que des fils à un moment donné). C'est une notion statistique, pas biblique, mais elle confirme notre origine africaine unique.",
+        detail_en: "She is not the first woman, nor the only one of her time! It is the name given to the most recent common ancestor through the maternal line (mitochondrial DNA) of all modern humanity. She lived in Africa about 150,000 to 200,000 years ago. All other female lineages of her contemporaries died out (they only had sons at some point). It is a statistical notion, not biblical, but it confirms our unique African origin.",
         priority: 2,
         tags: ["Science", "Femme"]
     },
@@ -97,7 +117,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "La géographie était méconnaissable.",
+        content_en: "Geography was unrecognizable.",
         detail: "Nous sommes en pleine période glaciaire. D'immenses calottes de glace recouvrent le nord de l'Europe et de l'Amérique, stockant des quantités phénoménales d'eau. Conséquence : le niveau des océans est 120 mètres plus bas qu'aujourd'hui ! La carte du monde est différente : la Grande-Bretagne est rattachée au continent (Doggerland), l'Indonésie, la Malaisie et Bornéo forment un seul continent géant (Sunda). On pouvait marcher de Singapour à Bali.",
+        detail_en: "We are in the middle of an Ice Age. Huge ice caps cover northern Europe and America, storing phenomenal amounts of water. Consequence: sea levels are 120 meters lower than today! The world map is different: Great Britain is attached to the continent (Doggerland), Indonesia, Malaysia, and Borneo form a single giant continent (Sunda). You could walk from Singapore to Bali.",
         priority: 2,
         tags: ["Climat", "Géographie"]
     },
@@ -107,7 +129,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "Sapiens, le tueur en série écologique ?",
+        content_en: "Sapiens, the ecological serial killer?",
         detail: "C'est une coïncidence troublante : partout où Sapiens arrive, la mégafaune disparaît peu après. En Australie, les wombats géants et les lions marsupiaux s'éteignent en quelques millénaires après l'arrivée des aborigènes. En Amérique, les mammouths, tigres à dents de sabre et paresseux géants disparaissent juste après l'arrivée des Clovis. Chasse excessive (Blitzkrieg), brûlis des forêts ou modification des écosystèmes ? Le débat fait rage, mais Sapiens est le suspect n°1 de la première extinction de masse anthropique.",
+        detail_en: "It is a disturbing coincidence: wherever Sapiens arrives, megafauna disappears shortly after. In Australia, giant wombats and marsupial lions went extinct within a few millennia of the arrival of Aboriginals. In America, mammoths, saber-toothed tigers, and giant sloths disappeared just after the arrival of the Clovis people. Overhunting (Blitzkrieg), slash-and-burn, or ecosystem modification? The debate rages, but Sapiens is the #1 suspect for the first anthropogenic mass extinction.",
         priority: 1,
         tags: ["Écologie", "Extinction"]
     },
@@ -117,7 +141,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "L'art n'est pas né en Europe.",
+        content_en: "Art was not born in Europe.",
         detail: "On a longtemps cru que l'art était né avec les grottes européennes (Chauvet, Lascaux). C'est faux. Dans la grotte de Blombos en Afrique du Sud, on a trouvé des blocs d'ocre gravés de motifs géométriques et des colliers de coquillages datant de -75 000 ans. La pensée symbolique ('Je crée un objet inutile pour signifier quelque chose') faisait partie du bagage intellectuel de Sapiens bien avant qu'il ne quitte son berceau africain.",
+        detail_en: "It was long believed that art was born with European caves (Chauvet, Lascaux). That is false. In Blombos Cave in South Africa, ochre blocks engraved with geometric patterns and shell necklaces dating back to -75,000 years were found. Symbolic thought ('I create a useless object to signify something') was part of Sapiens' intellectual baggage well before they left their African cradle.",
         priority: 2,
         tags: ["Objet", "Art"]
     },
@@ -127,7 +153,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "Nos ancêtres étaient noirs.",
+        content_en: "Our ancestors were Black.",
         detail: "C'est contre-intuitif pour beaucoup, mais les premiers Sapiens arrivés en Europe avaient la peau foncée (pour se protéger des UV africains) et, paradoxalement, souvent les yeux bleus (comme le révèle l'ADN de 'Cheddar Man' en Angleterre, vieux de 10 000 ans). La peau blanche est une adaptation évolutive très tardive (il y a seulement 8000 ans environ) liée à l'agriculture et au besoin de synthétiser la vitamine D sous les faibles soleils du Nord. Le racisme basé sur la couleur n'a aucun sens historique profond.",
+        detail_en: "It is counter-intuitive for many, but the first Sapiens who arrived in Europe had dark skin (to protect against African UV) and, paradoxically, often blue eyes (as revealed by the DNA of 'Cheddar Man' in England, 10,000 years old). White skin is a very late evolutionary adaptation (only about 8,000 years ago) linked to agriculture and the need to synthesize vitamin D under weak Northern suns. Racism based on color makes no deep historical sense.",
         priority: 1,
         tags: ["Biologie", "Racisme"]
     },
@@ -137,7 +165,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "La rencontre avec les Hobbits.",
+        content_en: "The encounter with Hobbits.",
         detail: "L'histoire humaine ressemblait alors au Seigneur des Anneaux : plusieurs espèces intelligentes cohabitaient. En arrivant sur l'île de Florès (Indonésie), Sapiens a peut-être croisé Homo Floresiensis, une espèce humaine naine (1 mètre de haut) issue de l'évolution insulaire d'Erectus. Ils ont disparu peu après notre arrivée, vers -50 000 ans. Nous sommes aujourd'hui les seuls survivants d'une famille autrefois nombreuse.",
+        detail_en: "Human history then resembled Lord of the Rings: several intelligent species coexisted. Arriving on the island of Flores (Indonesia), Sapiens may have crossed paths with Homo Floresiensis, a dwarf human species (1 meter tall) resulting from the island evolution of Erectus. They disappeared shortly after our arrival, around -50,000 years ago. We are today the only survivors of a once large family.",
         priority: 3,
         tags: ["Rencontre", "Monstre"]
     },
@@ -147,7 +177,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "Le propulseur : l'artillerie paléolithique.",
+        content_en: "The spearthrower: Paleolithic artillery.",
         detail: "Sapiens arrive avec une innovation technologique majeure : le propulseur. C'est un simple crochet (souvent en bois de renne sculpté) qui prolonge le bras et démultiplie la force de levier. Il permet de lancer une sagaie plus loin, plus fort et avec plus de précision que si elle était lancée à la main. Cela permettait de chasser le gros gibier en restant à distance de sécurité, contrairement aux Néandertaliens qui utilisaient des épieux lourds nécessitant un contact rapproché et dangereux.",
+        detail_en: "Sapiens arrives with a major technological innovation: the spearthrower (atlatl). It is a simple hook (often carved reindeer antler) that extends the arm and multiplies leverage. It allows throwing a spear further, harder, and with more precision than if thrown by hand. This allowed hunting large game while staying at a safe distance, unlike Neanderthals who used heavy spears requiring close and dangerous contact.",
         priority: 3,
         tags: ["Objet", "Guerre"]
     },
@@ -157,7 +189,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "L'alliance qui a tout changé : le Chien.",
+        content_en: "The alliance that changed everything: the Dog.",
         detail: "C'est peut-être l'événement le plus sous-estimé de l'histoire. Sapiens est le seul primate à avoir domestiqué un autre super-prédateur : le loup gris. Cette alliance a commencé bien avant l'agriculture (vers -30 000 ou avant). Les chiens apportaient leur odorat, leur ouïe et la chaleur la nuit ; les hommes apportaient la nourriture cuite et la stratégie. Ensemble, ils sont devenus imbattables à la chasse. Les Néandertaliens n'avaient pas de chiens.",
+        detail_en: "It is perhaps the most underestimated event in history. Sapiens is the only primate to have domesticated another super-predator: the gray wolf. This alliance began well before agriculture (around -30,000 or earlier). Dogs brought their smell, hearing, and warmth at night; men brought cooked food and strategy. Together, they became unbeatable at hunting. Neanderthals did not have dogs.",
         priority: 2,
         tags: ["Animal", "Alliance"]
     },
@@ -167,7 +201,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "Nous sommes des survivants.",
+        content_en: "We are survivors.",
         detail: "Les généticiens ont découvert qu'avant la sortie d'Afrique, vers -70 000 ans, l'humanité a traversé un 'goulot d'étranglement' démographique terrifiant. La population mondiale de Sapiens a chuté drastiquement, peut-être à 2 000 ou 10 000 individus seulement (peut-être à cause de l'hiver volcanique du supervolcan Toba en Indonésie). Nous sommes tous les descendants miraculés de ce petit groupe de survivants.",
+        detail_en: "Geneticists have discovered that before leaving Africa, around -70,000 years ago, humanity went through a terrifying population 'bottleneck'. The world population of Sapiens dropped drastically, perhaps to only 2,000 or 10,000 individuals (possibly due to the volcanic winter of the Toba supervolcano in Indonesia). We are all the miraculous descendants of this small group of survivors.",
         priority: 2,
         tags: ["Catastrophe", "Démographie"]
     },
@@ -177,7 +213,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "L'ocre rouge : le sang de la terre.",
+        content_en: "Red ochre: the blood of the earth.",
         detail: "Partout où Sapiens passe, on retrouve des traces d'ocre rouge. Était-ce une crème solaire ? Un produit pour tanner les peaux ? Probablement. Mais son omniprésence dans les sépultures suggère une valeur symbolique forte : la couleur du sang et de la vie. Sapiens est 'l'homme rouge'. C'est le premier universel culturel de notre espèce, bien avant la religion ou l'argent.",
+        detail_en: "Wherever Sapiens goes, traces of red ochre are found. Was it sunscreen? A product for tanning skins? Probably. But its omnipresence in burials suggests a strong symbolic value: the color of blood and life. Sapiens is 'the red man'. It is the first cultural universal of our species, long before religion or money.",
         priority: 3,
         tags: ["Objet", "Culture"]
     },
@@ -187,7 +225,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "L'impossible colonisation de l'Australie.",
+        content_en: "The impossible colonization of Australia.",
         detail: "Arriver en Australie vers -50 000 / -65 000 est l'un des plus grands exploits de l'histoire. Même avec le niveau des mers bas, l'Australie (Sahul) n'a jamais été reliée à l'Asie par la terre. Il y avait toujours au moins 80 à 100 km de haute mer à traverser, avec des courants violents. Cela implique que les premiers humains avaient déjà des bateaux ou des radeaux sophistiqués et des compétences de navigation bien avant les Phéniciens ou les Vikings.",
+        detail_en: "Reaching Australia around -50,000 / -65,000 is one of the greatest feats in history. Even with low sea levels, Australia (Sahul) was never connected to Asia by land. There was always at least 80 to 100 km of open sea to cross, with violent currents. This implies that early humans already had sophisticated boats or rafts and navigation skills long before the Phoenicians or Vikings.",
         priority: 2,
         tags: ["Navigation", "Exploit"]
     },
@@ -197,7 +237,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "La liberté absolue.",
+        content_en: "Absolute freedom.",
         detail: "Il faut essayer d'imaginer la psychologie de ces premiers explorateurs. Ils avançaient dans un monde sans frontières, sans propriétaires, sans cartes. L'horizon était la seule limite. Un groupe pouvait marcher des milliers de kilomètres vers l'Est sans jamais rencontrer âme qui vive. C'était l'ère de la liberté de mouvement totale, mais aussi d'une solitude cosmique face à une nature immense et dangereuse.",
+        detail_en: "One must try to imagine the psychology of these first explorers. They moved through a world without borders, without owners, without maps. The horizon was the only limit. A group could walk thousands of kilometers to the East without ever meeting a living soul. It was the era of total freedom of movement, but also of cosmic solitude in the face of an immense and dangerous nature.",
         priority: 3,
         tags: ["Philosophie", "Espace"]
     },
@@ -207,7 +249,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "Le gène de la parole (FOXP2).",
+        content_en: "The speech gene (FOXP2).",
         detail: "Pourquoi Sapiens parle-t-il si bien ? Les scientifiques ont identifié une mutation spécifique du gène FOXP2 qui s'est fixée très tôt chez notre espèce (et aussi chez Néandertal, contrairement à ce qu'on pensait). Cette mutation permet un contrôle moteur très fin de la bouche et du larynx. Sans cette petite modification biologique, pas de discours complexe, pas de mensonge sophistiqué, pas de mythes collectifs... pas de civilisation.",
+        detail_en: "Why does Sapiens speak so well? Scientists have identified a specific mutation of the FOXP2 gene that became fixed very early in our species (and also in Neanderthals, contrary to what was thought). This mutation allows very fine motor control of the mouth and larynx. Without this small biological modification, no complex speech, no sophisticated lie, no collective myths... no civilization.",
         priority: 1,
         tags: ["Biologie", "Langage"]
     },
@@ -217,7 +261,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "Le Nil, autoroute de secours.",
+        content_en: "The Nile, emergency highway.",
         detail: "Si la voie du détroit de Bab-el-Mandeb fut la principale, la vallée du Nil a joué un rôle crucial comme 'pompe'. Lors des périodes humides, le Sahara devenait vert et le Nil permettait de remonter vers le Nord. C'est par ce corridor que les échanges génétiques et culturels entre l'Afrique et le reste du monde ont continué à se faire ponctuellement, empêchant l'isolement total.",
+        detail_en: "If the Bab-el-Mandeb strait was the main route, the Nile valley played a crucial role as a 'pump'. During wet periods, the Sahara became green and the Nile allowed movement North. It is through this corridor that genetic and cultural exchanges between Africa and the rest of the world continued to occur occasionally, preventing total isolation.",
         priority: 3,
         tags: ["Géographie", "Climat"]
     },
@@ -227,7 +273,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "Le triomphe du bavardage.",
+        content_en: "The triumph of gossip.",
         detail: "Selon Harari, la force principale du langage de Sapiens n'est pas de décrire la réalité ('Attention, un lion !'), mais de faire du commérage ('Pierre a volé la banane de Paul'). Le bavardage social permet de savoir à qui faire confiance dans un groupe élargi. Cela a permis aux groupes de Sapiens d'atteindre la taille critique de 150 individus (nombre de Dunbar), là où les autres humains plafonnaient à 50.",
+        detail_en: "According to Harari, the main strength of Sapiens' language is not to describe reality ('Watch out, a lion!'), but to gossip ('Peter stole Paul's banana'). Social gossip allows knowing who to trust in a larger group. This allowed Sapiens groups to reach the critical size of 150 individuals (Dunbar's number), where other humans peaked at 50.",
         priority: 1,
         tags: ["Sociologie", "Victoire"]
     },
@@ -237,7 +285,9 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "Où voir la trace ? Au Musée de l'Homme.",
+        content_en: "Where to see the trace? At the Museum of Man.",
         detail: "À Paris, le Musée de l'Homme (Trocadéro) est le lieu idéal pour comprendre cette histoire. On y voit le crâne de Cro-Magnon 1 (le premier Sapiens européen découvert en Dordogne), mais aussi une galerie de l'évolution montrant notre buissonnement familial. Une visite indispensable pour se décentrer et comprendre que nous sommes tous des migrants.",
+        detail_en: "In Paris, the Musée de l'Homme (Trocadero) is the ideal place to understand this history. You can see the skull of Cro-Magnon 1 (the first European Sapiens discovered in Dordogne), but also a gallery of evolution showing our family bush. An essential visit to decentre oneself and understand that we are all migrants.",
         priority: 2,
         tags: ["Musée", "Trace"]
     },
@@ -247,9 +297,10 @@ const data_ep1 = [
         type: "flashcard",
         category: "-60 000 : Sortie d'Afrique",
         content: "Le début de l'Anthropocène ?",
+        content_en: "The beginning of the Anthropocene?",
         detail: "Au final, cette date de -60 000 marque peut-être le véritable début de l'Anthropocène. C'est le moment où une espèce quitte sa niche écologique naturelle pour envahir et modifier tous les écosystèmes de la planète. De quelques milliers de survivants, nous sommes passés à 8 milliards, transformant la Terre irréversiblement. Notre succès biologique est total, mais son coût écologique a commencé dès nos premiers pas hors d'Afrique.",
+        detail_en: "In the end, this date of -60,000 perhaps marks the true beginning of the Anthropocene. It is the moment when a species leaves its natural ecological niche to invade and modify all the ecosystems of the planet. From a few thousand survivors, we have grown to 8 billion, irreversibly transforming the Earth. Our biological success is total, but its ecological cost began with our very first steps out of Africa.",
         priority: 1,
         tags: ["Écologie", "Conclusion"]
     }
 ];
-

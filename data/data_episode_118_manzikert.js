@@ -6,7 +6,7 @@ const data_ep118 = [
         category: "Guerre",
         content: "Le jour fatal",
         date: "26 août 1071",
-        detail: "C'est la bataille qui a tué l'Empire Byzantin. L'Empereur Romain IV Diogène est écrasé par le Sultan seldjoukide Alp Arslan près du lac de Van (Arménie). <br><br><strong>Anecdote:</strong> Pour la première fois de l'histoire, un Empereur romain est capturé vivant sur le champ de bataille par un musulman.",
+        detail: "C'est la bataille qui a tué l'Empire Byzantin. L'Empereur Romain IV Diogène est écrasé par le Sultan seldjoukide Alp Arslan près du lac de Van. Pour la première fois de l'histoire, un Empereur romain est capturé vivant sur le champ de bataille par un musulman.",
         tags: ["Guerre", "Choc", "Byzance"],
         img: "assets/images/ep118_battle_map.png"
     },
@@ -15,7 +15,7 @@ const data_ep118 = [
         category: "Personnage",
         content: "Alp Arslan",
         date: "Le Lion Héroïque",
-        detail: "Le sultan turc Alp Arslan ('Lion Héroïque') ne voulait même pas cette guerre. Il voulait attaquer l'Égypte fatimide ! Il a été forcé de faire demi-tour pour affronter les Byzantins. <br><br><strong>Anecdote:</strong> Il portait un nœud à sa queue de cheval (symbole turc de deuil) au cas où il mourrait au combat.",
+        detail: "Le sultan turc Alp Arslan ('Lion Héroïque') ne voulait même pas cette guerre. Il voulait attaquer l'Égypte fatimide ! Il a été forcé de faire demi-tour pour affronter les Byzantins. Il portait un nœud à sa queue de cheval (symbole turc de deuil) au cas où il mourrait au combat.",
         tags: ["Héros", "Turquie", "Lion"],
         img: "assets/images/ep118_alp_arslan.png"
     },
@@ -24,16 +24,16 @@ const data_ep118 = [
         category: "Trahison",
         content: "Les Doukas",
         date: "Politique",
-        detail: "La défaite byzantine est due à une trahison interne. Andronikos Doukas, un rival politique de l'empereur, a commandé à l'arrière-garde de se replier au moment critique, laissant l'empereur encerclé. <br><br><strong>Anecdote:</strong> La politique byzantine était si toxique que les nobles préféraient voir l'empire perdre plutôt que leur rival gagner.",
+        detail: "La défaite byzantine est due à une trahison interne. Andronikos Doukas, un rival politique, a commandé à l'arrière-garde de se replier au moment critique, piégeant l'empereur. La politique byzantine était si toxique que les nobles préféraient parfois voir l'empire perdre plutôt que leur rival gagner.",
         tags: ["Trahison", "Politique", "Intrigue"],
         img: "assets/images/ep118_betrayal.png"
     },
     {
         id: 11804,
         category: "Symbolique",
-        content: "L'Umiliation",
+        content: "L'Humiliation",
         date: "Rituel",
-        detail: "Selon la légende, quand Romain IV fut amené devant Alp Arslan, le Sultan a posé son pied sur le cou de l'Empereur. Puis il l'a relevé, l'a traité avec honneur et l'a libéré contre une rançon. <br><br><strong>Anecdote:</strong> Romain IV rentra chez lui, mais fut aveuglé et tué par ses propres sujets (les Doukas).",
+        detail: "Selon la légende, Alp Arslan a posé son pied sur le cou de l'Empereur captif en signe de soumission, avant de le relever et de le traiter avec honneur. Romain IV fut libéré contre rançon, mais à son retour, il fut aveuglé et tué par ses propres sujets (les Doukas).",
         tags: ["Rituel", "Honneur", "Tragédie"],
         img: "assets/images/ep118_foot_on_neck.png"
     },
@@ -42,7 +42,7 @@ const data_ep118 = [
         category: "Conséquence",
         content: "L'ouverture des vannes",
         date: "Migration",
-        detail: "Après Manzikert, il n'y avait plus d'armée pour défendre l'Anatolie. Les tribus turques nomades (Turcomans) se sont déversées librement sur le plateau anatolien avec leurs troupeaux. <br><br><strong>Anecdote:</strong> En 10 ans, Nicée (à 100km de Constantinople) était prise. L'Asie Mineure grecque est devenue la Turquie.",
+        detail: "Après Manzikert, il n'y avait plus d'armée pour défendre l'Anatolie. Les tribus turques nomades (Turcomans) se sont déversées librement sur le plateau. En 10 ans, Nicée (à 100km de Constantinople) était prise. L'Asie Mineure grecque est devenue la Turquie.",
         tags: ["Migration", "Géographie", "Changement"],
         img: "assets/images/ep118_migration.png"
     },
@@ -51,7 +51,7 @@ const data_ep118 = [
         category: "Religion",
         content: "Le Ghazi",
         date: "Concept",
-        detail: "Les guerriers turcs se voyaient comme des 'Ghazis', des combattants de la foi pour l'Islam aux frontières. <br><br><strong>Anecdote:</strong> Cette éthique guerrière façonnera l'Empire Ottoman plus tard.",
+        detail: "Les guerriers turcs se voyaient comme des 'Ghazis', des combattants de la foi pour l'Islam aux frontières. Cette éthique guerrière religieuse façonnera plus tard l'idéologie de l'Empire Ottoman.",
         tags: ["Religion", "Guerre", "Islam"],
         img: "assets/images/ep118_ghazi.png"
     },
@@ -60,7 +60,7 @@ const data_ep118 = [
         category: "Armée",
         content: "Archers montés",
         date: "Technique",
-        detail: "Les Turcs utilisaient la tactique des steppes : fuite simulée et tir à l'arc à cheval (le tir parthe). Les chevaliers lourds byzantins, lents et épuisés par la chaleur d'août, ne pouvaient rien faire. <br><br><strong>Anecdote:</strong> C'est la victoire de la mobilité sur la puissance.",
+        detail: "Les Turcs utilisaient la tactique des steppes : fuite simulée et tir à l'arc à cheval (le tir parthe). Les chevaliers lourds byzantins, lents et épuisés par la chaleur d'août, furent harcelés sans pouvoir riposter. C'est la victoire de la mobilité sur la puissance.",
         tags: ["Cheval", "Tactique", "Arc"],
         img: "assets/images/ep118_horse_archers.png"
     },
@@ -69,7 +69,7 @@ const data_ep118 = [
         category: "Géopolitique",
         content: "L'appel à l'aide",
         date: "1095",
-        detail: "Terrifié par l'avance turque, le nouvel empereur Alexis Comnène enverra plus tard un appel au secours au Pape Urbain II. <br><br><strong>Anecdote:</strong> C'est la cause directe de la Première Croisade. Les Croisés viendront pour 'sauver' Byzance (et finiront par la piller en 1204).",
+        detail: "Terrifié par l'avance turque, le nouvel empereur Alexis Comnène enverra plus tard un appel au secours au Pape Urbain II. C'est la cause directe de la Première Croisade. Les Croisés viendront pour 'sauver' Byzance... et finiront par la piller un siècle plus tard.",
         tags: ["Croisades", "Pape", "Europe"],
         img: "assets/images/ep118_alexios_letter.png"
     },
@@ -78,7 +78,7 @@ const data_ep118 = [
         category: "Culture",
         content: "Rûm",
         date: "Mot",
-        detail: "Les Turcs ont appelé leur nouveau sultanat en Anatolie le 'Sultanat de Rûm' (Rome). Ils se voyaient comme les héritiers géographiques de Rome. <br><br><strong>Anecdote:</strong> Le poète Rûmi (Mevlana) s'appelle ainsi car il vivait en terre 'romaine' (Konya).",
+        detail: "Les Turcs ont appelé leur nouveau sultanat en Anatolie le 'Sultanat de Rûm' (Rome), se voyant comme les héritiers géographiques de Rome. Le célèbre poète Rûmi (Mevlana) s'appelle ainsi car il vivait en terre 'romaine' (Konya).",
         tags: ["Langue", "Héritage", "Rome"],
         img: "assets/images/ep118_sultanate_rum.png"
     },
@@ -87,7 +87,7 @@ const data_ep118 = [
         category: "Art",
         content: "L'Architecture Seldjoukide",
         date: "Art",
-        detail: "Ils ont couvert l'Anatolie de Caravansérails, de Mosquées et de Madrasas au style unique (portails en pierre sculptée géométrique). <br><br><strong>Anecdote:</strong> C'est une synthèse entre l'art persan et la tradition de la pierre arménienne/byzantine.",
+        detail: "Ils ont couvert l'Anatolie de Caravansérails, de Mosquées et de Madrasas au style unique (portails en pierre sculptée géométrique). C'est une synthèse originale entre l'art persan et la tradition de la pierre arménienne/byzantine.",
         tags: ["Architecture", "Pierre", "Beauté"],
         img: "assets/images/ep118_seljuk_portal.png"
     },
@@ -96,7 +96,7 @@ const data_ep118 = [
         category: "Ethnie",
         content: "Turquification",
         date: "Processus",
-        detail: "Comment l'Anatolie est-elle devenue turque ? Pas par génocide, mais par assimilation lente. Les paysans chrétiens, sans prêtres ni protection, se sont convertis à l'Islam pour payer moins d'impôts et s'intégrer à la nouvelle élite. <br><br><strong>Anecdote:</strong> L'ADN des Turcs modernes montre un fort mélange avec les populations anatoliennes anciennes.",
+        detail: "L'Anatolie est devenue turque par assimilation lente plus que par génocide. Les paysans chrétiens, sans prêtres ni protection, se sont convertis à l'Islam pour payer moins d'impôts. L'ADN des Turcs modernes montre d'ailleurs un fort mélange avec les populations anatoliennes anciennes.",
         tags: ["Population", "ADN", "Islam"],
         img: "assets/images/ep118_conversion.png"
     },
@@ -105,7 +105,7 @@ const data_ep118 = [
         category: "Légende",
         content: "La robe blanche",
         date: "Symbole",
-        detail: "Le matin de la bataille, Alp Arslan s'est habillé en blanc (comme un linceul) et s'est parfumé comme un mort, pour montrer à ses hommes qu'il était prêt au martyre. <br><br><strong>Anecdote:</strong> Cela a galvanisé ses troupes inférieures en nombre (20 000 contre 40 000 Byzantins).",
+        detail: "Le matin de la bataille, Alp Arslan s'est habillé en blanc (comme un linceul) et s'est parfumé, signalant à ses hommes qu'il était prêt au martyre. Ce geste a galvanisé ses troupes inférieures en nombre (20 000 contre 40 000 Byzantins).",
         tags: ["Mort", "Symbole", "Courage"],
         img: "assets/images/ep118_white_robe.png"
     },
@@ -114,7 +114,7 @@ const data_ep118 = [
         category: "Mercenaires",
         content: "Les Normands... aussi !",
         date: "Ironie",
-        detail: "L'armée byzantine était un patchwork de mercenaires, dont des Normands (Roussel de Bailleul) et même des... Turcs (Petchénègues). <br><br><strong>Anecdote:</strong> Les mercenaires turcs ont changé de camp en pleine bataille en voyant leurs frères en face.",
+        detail: "L'armée byzantine était un patchwork hétéroclite de mercenaires, dont des Normands et même des Turcs (Petchénègues). Pendant la bataille, les mercenaires turcs ont changé de camp en voyant leurs frères en face, précipitant la débâcle.",
         tags: ["Mercenaire", "Armée", "Défection"],
         img: "assets/images/ep118_mercenaries.png"
     },
@@ -123,7 +123,7 @@ const data_ep118 = [
         category: "Lieu",
         content: "Manzikert aujourd'hui",
         date: "Malazgirt",
-        detail: "La ville s'appelle Malazgirt (à l'est de la Turquie). C'est un lieu de pèlerinage nationaliste turc chaque 26 août. <br><br><strong>Anecdote:</strong> Erdogan y fait souvent des discours pour célébrer l'entrée des Turcs en Anatolie.",
+        detail: "La ville s'appelle aujourd'hui Malazgirt (est de la Turquie). C'est un lieu de pèlerinage nationaliste majeur où le président Erdogan célèbre chaque 26 août l'entrée historique des Turcs en Anatolie.",
         tags: ["Politique", "Mémoire", "Turquie"],
         img: "assets/images/ep118_erdogan_malazgirt.png"
     },
@@ -132,7 +132,7 @@ const data_ep118 = [
         category: "Conclusion",
         content: "La Fin de l'Antiquité",
         date: "Résumé",
-        detail: "Pour beaucoup d'historiens, Manzikert est la vraie fin de l'Antiquité en Asie Mineure. Ce qui était grec chrétien depuis 1000 ans bascule vers l'Islam turc pour toujours. <br><br><strong>Anecdote:</strong> Sans Manzikert, pas de Croisades, pas d'Empire Ottoman, pas d'Istanbul.",
+        detail: "Pour beaucoup d'historiens, Manzikert marque la vraie fin de l'Antiquité en Asie Mineure. Ce territoire grec et chrétien depuis 1000 ans bascule vers l'Islam turc pour toujours. Sans Manzikert, pas de Croisades, pas d'Empire Ottoman, pas d'Istanbul.",
         tags: ["Fin", "Histoire", "Tournant"],
         img: "assets/images/ep118_timeline_shift.png"
     }

@@ -6,7 +6,7 @@ const data_ep134 = [
         category: "Bataille",
         content: "La dernière des géantes",
         date: "7 octobre 1571",
-        detail: "C'est la dernière grande bataille navale de l'histoire disputée uniquement par des galères à rames (comme dans l'Antiquité). 400 navires, 140 000 hommes se sont affrontés dans le golfe de Patras (Grèce). C'était 'Salamine' version poudre à canon. <br><br><strong>Anecdote:</strong> La mer était rouge de sang sur des kilomètres.",
+        detail: "C'est la dernière grande bataille de l'histoire disputée uniquement par des galères à rames, comme dans l'Antiquité, mais avec de la poudre à canon. 400 navires et 140 000 hommes se sont affrontés dans le golfe de Patras. La mer était littéralement rouge de sang sur des kilomètres.",
         tags: ["Navire", "Fin", "Géant"],
         img: "assets/images/ep134_battle_panorama.png"
     },
@@ -15,7 +15,7 @@ const data_ep134 = [
         category: "Alliance",
         content: "La Sainte-Ligue",
         date: "Union",
-        detail: "Pour une fois, les Européens divisés se sont unis face à la menace ottomane. Le Pape Pie V a réussi à allier l'Espagne, Venise et Gênes. La France, elle, a refusé (elle était alliée secrète des Turcs contre l'Autriche !). <br><br><strong>Anecdote:</strong> Une 'Croisade' maritime.",
+        detail: "Face à la menace ottomane, le Pape Pie V a réussi un miracle diplomatique : unir l'Espagne, Venise et Gênes dans une 'Sainte-Ligue'. La France, par realpolitik, a refusé car elle était l'alliée secrète des Turcs pour contrer l'Autriche ! C'était une véritable croisade maritime.",
         tags: ["Diplomatie", "Religion", "Pape"],
         img: "assets/images/ep134_holy_league_flag.png"
     },
@@ -24,7 +24,7 @@ const data_ep134 = [
         category: "Héros",
         content: "Don Juan d'Autriche",
         date: "Le Bâtard",
-        detail: "Le chef suprême de la flotte chrétienne était Don Juan d'Autriche, demi-frère bâtard du roi d'Espagne Philippe II. Il avait 24 ans, était beau, charismatique et aimait la guerre. Il a dansé une gaillarde sur le pont de son navire avant la bataille pour encourager ses hommes. <br><br><strong>Anecdote:</strong> Une rockstar du 16ème siècle.",
+        detail: "Le chef de la flotte chrétienne était Don Juan d'Autriche, demi-frère bâtard du roi d'Espagne. Ce jeune homme de 24 ans, beau et charismatique, était la 'rockstar' de son siècle. On raconte qu'il a dansé une gaillarde sur le pont de son navire juste avant la bataille pour encourager ses hommes.",
         tags: ["Jeunesse", "Charisme", "Chef"],
         img: "assets/images/ep134_don_juan.png"
     },
@@ -33,7 +33,7 @@ const data_ep134 = [
         category: "Technique",
         content: "Les Galéasses",
         date: "Arme secrète",
-        detail: "Les Vénitiens avaient transformé 6 grosses galères marchandes en forteresses flottantes bourrées de canons : les Galéasses. Placées en avant, elles ont brisé la ligne ottomane avant même le contact, coulant des dizaines de galères turques. <br><br><strong>Anecdote:</strong> Les 'tanks' de la mer.",
+        detail: "Les Vénitiens avaient une arme secrète : 6 'Galéasses', d'énormes forteresses flottantes bourrées de canons. Placées en avant-garde, ces 'tanks de la mer' ont brisé la formation ottomane et coulé de nombreuses galères turques avant même le début du combat rapproché.",
         tags: ["Technologie", "Navire", "Canon"],
         img: "assets/images/ep134_galleass.png"
     },
@@ -42,7 +42,7 @@ const data_ep134 = [
         category: "Personnage",
         content: "Cervantes le Manchot",
         date: "Littérature",
-        detail: "Miguel de Cervantes (futur auteur de Don Quichotte) était soldat à bord de la galère 'Marquesa'. Bien que malade (fièvre), il a voulu combattre. Il a reçu trois balles d'arquebuse, dont une lui a fait perdre l'usage de la main gauche. Il en était très fier : 'Pour la plus grande gloire de la droite'. <br><br><strong>Anecdote:</strong> Sans Lépante, pas de Don Quichotte.",
+        detail: "Miguel de Cervantes, futur auteur de Don Quichotte, combattait ce jour-là sur la galère 'Marquesa'. Bien que malade, il a tenu à se battre et a reçu trois balles, perdant l'usage de sa main gauche. Il dira toute sa vie avoir perdu sa main 'pour la plus grande gloire de la droite' (celle qui écrit).",
         tags: ["Écrivain", "Blessure", "Fierté"],
         img: "assets/images/ep134_cervantes.png"
     },
@@ -51,7 +51,7 @@ const data_ep134 = [
         category: "Adversaire",
         content: "Ali Pacha",
         date: "Ottoman",
-        detail: "L'amiral turc Ali Pacha a commis l'erreur d'accepter le combat frontal dans un espace serré (ce qui favorisait la puissance de feu chrétienne). Sa tête a été coupée et plantée au bout d'une pique sur le navire amiral espagnol. Cela a démoralisé les Turcs. <br><br><strong>Anecdote:</strong> Il avait emmené ses fils et son trésor à bord.",
+        detail: "L'amiral turc Ali Pacha a commis l'erreur d'accepter le combat frontal dans un espace serré, ce qui favorisait la puissance de feu chrétienne. Sa tête a été coupée et plantée au bout d'une pique sur le navire amiral espagnol, démoralisant instantanément la flotte ottomane.",
         tags: ["Mort", "Erreur", "Chef"],
         img: "assets/images/ep134_ali_pasha_head.png"
     },
@@ -60,7 +60,7 @@ const data_ep134 = [
         category: "Religion",
         content: "Notre-Dame du Rosaire",
         date: "Prière",
-        detail: "Le Pape avait ordonné à toute la chrétienté de prier le Rosaire ce jour-là. La victoire a été attribuée à la Vierge Marie. La fête de 'Notre-Dame du Rosaire' (7 octobre) commémore Lépante. <br><br><strong>Anecdote:</strong> On dit que le Pape a eu une vision de la victoire au moment précis où elle arrivait.",
+        detail: "Le Pape avait ordonné à toute la chrétienté de prier le Rosaire pour la victoire. Le succès a été attribué à la Vierge Marie, et la fête de Notre-Dame du Rosaire (7 octobre) commémore encore aujourd'hui cet événement. La légende dit que le Pape a eu une vision de la victoire à l'instant précis où elle se produisait.",
         tags: ["Miracle", "Fête", "Catholique"],
         img: "assets/images/ep134_rosary.png"
     },
@@ -69,7 +69,7 @@ const data_ep134 = [
         category: "Esclavage",
         content: "Les Galériens",
         date: "Libération",
-        detail: "Les galères étaient propulsées par des esclaves/forçats. Les chrétiens avaient promis la liberté à leurs forçats s'ils gagnaient. Les Ottomans utilisaient 15 000 esclaves chrétiens enchaînés à leurs rames. 12 000 ont été libérés ce jour-là ! <br><br><strong>Anecdote:</strong> Une immense libération d'otages.",
+        detail: "Les galères étaient propulsées par des esclaves. Les chrétiens avaient promis la liberté à leurs forçats en cas de victoire. En gagnant, ils ont aussi libéré 12 000 esclaves chrétiens qui ramaient enchaînés sur les navires ottomans. Une immense libération d'otages au cœur de la bataille.",
         tags: ["Esclavage", "Liberté", "Rame"],
         img: "assets/images/ep134_galley_slaves.png"
     },
@@ -78,7 +78,7 @@ const data_ep134 = [
         category: "Violences",
         content: "Le massacre",
         date: "Corps à corps",
-        detail: "Une fois les navires accrochés, c'était un combat d'infanterie sur des ponts glissants de sang. Les arquebusiers espagnols (Tercios) ont surclassé les archers turcs. 30 000 Turcs tués contre 7 000 Chrétiens. <br><br><strong>Anecdote:</strong> On se battait avec tout : épées, piques, rames, oranges (!).",
+        detail: "Une fois les navires accrochés, c'était un combat d'infanterie brutal sur des ponts glissants de sang. Les arquebusiers espagnols ont surclassé les archers turcs. Le bilan fut terrible : 30 000 Turcs tués contre 7 000 Chrétiens. Dans la mêlée, on se battait avec tout : épées, rames, et même en jetant des oranges !",
         tags: ["Massacre", "Infanterie", "Sang"],
         img: "assets/images/ep134_boarding.png"
     },
@@ -87,7 +87,7 @@ const data_ep134 = [
         category: "Conséquence",
         content: "Victoire sans lendemain ?",
         date: "Politique",
-        detail: "La Sainte-Ligue s'est disloquée juste après (jalousies). Venise a signé une paix séparée. Les Turcs ont reconstruit leur flotte en 6 mois ('Vous nous avez coupé la barbe, elle repoussera plus dru'). <br><br><strong>Anecdote:</strong> Voltaire a dit : 'Les Turcs ont l'air d'avoir gagné la bataille'.",
+        detail: "La Sainte-Ligue s'est disloquée juste après à cause des jalousies internes. Les Turcs ont reconstruit leur flotte en 6 mois, disant avec ironie aux Occidentaux : 'En détruisant notre flotte, vous nous avez rasé la barbe, elle repoussera plus dru. En prenant Chypre, nous vous avons coupé un bras'.",
         tags: ["Politique", "Nuance", "Suite"],
         img: "assets/images/ep134_map_aftermath.png"
     },
@@ -96,7 +96,7 @@ const data_ep134 = [
         category: "Psychologie",
         content: "Le mythe brisé",
         date: "Invincibilité",
-        detail: "Pourtant, Lépante est capitale. Elle a brisé le mythe de l'invincibilité ottomane. L'Europe a cessé d'avoir peur d'être envahie par la mer. L'expansion ottomane en Méditerranée a été stoppée net. <br><br><strong>Anecdote:</strong> Un tournant psychologique majeur.",
+        detail: "Malgré tout, Lépante est capitale car elle a brisé le mythe de l'invincibilité ottomane. Pour la première fois, l'Europe a compris que le Turc pouvait être battu sur mer, stoppant net la peur de l'invasion maritime. C'était un tournant psychologique majeur.",
         tags: ["Moral", "Tournant", "Peur"],
         img: "assets/images/ep134_veronese_painting.png"
     },
@@ -105,7 +105,7 @@ const data_ep134 = [
         category: "Technique",
         content: "Tirs amis",
         date: "Confusion",
-        detail: "Dans la fumée, il était difficile de distinguer les amis des ennemis (tout le monde avait des galères). Les navires chrétiens avaient coupé leur éperon de proue pour tirer plus bas. <br><br><strong>Anecdote:</strong> Don Juan portait une armure brillante pour être vu.",
+        detail: "Dans la fumée épaisse de la poudre noire, il était difficile de distinguer les amis des ennemis car tous utilisaient le même type de galères. Don Juan devait porter une armure étincelante pour être repérable au cœur de ce chaos.",
         tags: ["Chaos", "Fumée", "Tactique"],
         img: "assets/images/ep134_smoke_battle.png"
     },
@@ -114,7 +114,7 @@ const data_ep134 = [
         category: "Symbole",
         content: "Le butin",
         date: "Etendards",
-        detail: "Des centaines d'étendards turcs en soie verte (avec des versets du Coran brodés d'or) ont été pris. Ils sont encore exposés dans des églises espagnoles ou italiennes (Tolède, Pise). <br><br><strong>Anecdote:</strong> Le trophée ultime.",
+        detail: "Des centaines d'étendards turcs en soie verte, brodés de versets du Coran en fil d'or, ont été capturés. Ils sont aujourd'hui encore exposés comme trophées dans les églises de Tolède ou de Pise, témoins muets de cette journée sanglante.",
         tags: ["Trophée", "Drapeau", "Soie"],
         img: "assets/images/ep134_ottoman_flag.png"
     },
@@ -123,7 +123,7 @@ const data_ep134 = [
         category: "Lieu",
         content: "Ithaque",
         date: "Ulysse",
-        detail: "La bataille a eu lieu tout près de l'île d'Ithaque, le royaume d'Ulysse. Comme si l'histoire navale revenait toujours aux mêmes endroits. <br><br><strong>Anecdote:</strong> Homère aurait apprécié le spectacle.",
+        detail: "La bataille a eu lieu tout près de l'île d'Ithaque, le royaume mythique d'Ulysse. Comme si l'histoire navale de la Méditerranée revenait toujours se jouer aux mêmes endroits, sous le regard des anciens dieux.",
         tags: ["Géographie", "Mythe", "Grèce"],
         img: "assets/images/ep134_map_ithaca.png"
     },
@@ -132,7 +132,7 @@ const data_ep134 = [
         category: "Conclusion",
         content: "La fin d'une ère",
         date: "Voile",
-        detail: "Après Lépante, les galères vont disparaître au profit des galions à voiles (plus autonomes, plus armés). L'avenir appartient aux marines de l'Atlantique (Angleterre, Pays-Bas), pas de la Méditerranée. <br><br><strong>Anecdote:</strong> Le chant du cygne de la rame.",
+        detail: "Lépante est le chant du cygne de la galère à rames. Après cette bataille, la marine basculera vers les grands voiliers (galions) armés de canons, plus autonomes. L'avenir des mers appartiendra désormais aux puissances atlantiques, et non plus méditerranéennes.",
         tags: ["Fin", "Technologie", "Marine"],
         img: "assets/images/ep134_galleon_transition.png"
     }

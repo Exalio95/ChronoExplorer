@@ -8,7 +8,7 @@ const episodesData = [
     { id: 17, title: episodeTitle_17, cards: data_ep17 },
     { id: 18, title: episodeTitle_18, cards: data_ep18 },
     { id: 19, title: episodeTitle_19, cards: data_ep19 },
-    { id: 1, title: episodeTitle_1, cards: data_ep1 },
+    { id: 1, title: episodeTitle_1, title_en: episodeTitle_1_en, cards: data_ep1 },
     { id: 20, title: episodeTitle_20, cards: data_ep20 },
     { id: 21, title: episodeTitle_21, cards: data_ep21 },
     { id: 22, title: episodeTitle_22, cards: data_ep22 },

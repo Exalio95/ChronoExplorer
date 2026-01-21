@@ -24,14 +24,14 @@ if (typeof firebase !== 'undefined') {
     window.firebaseAuth = firebase.auth();
     window.db = firebase.firestore();
 
-    // Fallback variables for older scripts if needed (though we should use window.firebaseAuth)
-    var auth = window.firebaseAuth;
-    var db = window.db;
+    // Fallback variables - Renamed to avoid collision with our custom window.auth object
+    var firebaseAuthInstance = window.firebaseAuth;
+    var firestoreInstance = window.db;
 
     console.log("🔥 Firebase connecté avec succès au projet:", firebaseConfig.projectId);
 
     // Activer la persistance hors ligne pour Firestore si possible
-    db.enablePersistence()
+    window.db.enablePersistence()
         .catch((err) => {
             if (err.code == 'failed-precondition') {
                 console.log("Persistence failed: multiple tabs open");

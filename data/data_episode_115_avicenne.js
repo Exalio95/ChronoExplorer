@@ -6,7 +6,7 @@ const data_ep115 = [
         category: "Personnage",
         content: "Ibn Sina (Avicenne)",
         date: "980-1037",
-        detail: "Né près de Boukhara (Ouzbékistan), Ibn Sina était un enfant prodige qui connaissait le Coran par cœur à 10 ans et la médecine à 16. Il a soigné le Sultan de Boukhara qui lui a ouvert sa bibliothèque royale. <br><br><strong>Anecdote:</strong> Il vivait une vie trépidante, fuyant de cour en cour, écrivant parfois à cheval entre deux batailles. Il est mort d'excès (de travail et... de plaisirs).",
+        detail: "Né près de Boukhara, Ibn Sina était un enfant prodige connaissant le Coran et la médecine avant l'adolescence. Il a mené une vie trépidante et itinérante, fuyant de cour en cour en Perse, écrivant parfois à cheval entre deux batailles, avant de mourir d'épuisement et d'excès.",
         tags: ["Génie", "Médecine", "Philosophie"],
         img: "assets/images/ep115_avicenna_portrait.png"
     },
@@ -15,7 +15,7 @@ const data_ep115 = [
         category: "Livre",
         content: "Le Canon de la Médecine",
         date: "1025",
-        detail: "Le 'Kitab al-Qanun fi al-Tibb' est son chef-d'œuvre. C'est une encyclopédie en 5 volumes qui synthétise tout le savoir médical grec (Galien, Hippocrate) et y ajoute les découvertes arabes. <br><br><strong>Anecdote:</strong> Ce livre restera le manuel de référence des universités de médecine en Europe (Montpellier, Padoue) jusqu'au... 17ème siècle ! Une longévité record de 600 ans.",
+        detail: "Le 'Kitab al-Qanun fi al-Tibb' (Canon) est son chef-d'œuvre, une encyclopédie en 5 volumes synthétisant le savoir grec et arabe. Ce livre restera le manuel de référence des universités de médecine en Europe (Montpellier, Padoue) jusqu'au 17ème siècle, une longévité record de 600 ans.",
         tags: ["Livre", "Savoir", "Europe"],
         img: "assets/images/ep115_canon_manuscript.png"
     },
@@ -24,7 +24,7 @@ const data_ep115 = [
         category: "Institution",
         content: "Le Bimaristan",
         date: "Hôpital",
-        detail: "Le monde musulman a inventé l'hôpital moderne (Bimaristan). C'était laïque, ouvert 24h/24, gratuit pour tous (riches ou pauvres), avec des salles séparées par pathologie et de la musique pour apaiser les malades. <br><br><strong>Anecdote:</strong> En Europe à la même époque, les 'Hôtels-Dieu' étaient surtout des mouroirs ou des asiles pour pauvres, pas des lieux de soin scientifique.",
+        detail: "Le monde musulman a inventé l'hôpital moderne (Bimaristan) : laïque, gratuit, ouvert 24h/24, avec des services spécialisés et de la musicothérapie. En Europe à la même époque, les 'Hôtels-Dieu' étaient davantage des mouroirs ou des asiles pour pauvres que des lieux de soin scientifique.",
         tags: ["Hôpital", "Social", "Invention"],
         img: "assets/images/ep115_bimaristan.png"
     },
@@ -33,7 +33,7 @@ const data_ep115 = [
         category: "Chirurgie",
         content: "Al-Zahrawi (Abulcasis)",
         date: "1000",
-        detail: "Bien qu'Avicenne soit le théoricien, Al-Zahrawi (à Cordoue) était le roi de la chirurgie. Il a inventé 200 instruments chirurgicaux (scalpels, forceps, catgut pour les sutures) encore utilisés aujourd'hui. <br><br><strong>Anecdote:</strong> Il décrivait déjà comment opérer une grossesse extra-utérine ou réduire une fracture complexe.",
+        detail: "Si Avicenne était le théoricien, Al-Zahrawi (à Cordoue) était le roi de la chirurgie. Il a inventé 200 instruments encore utilisés aujourd'hui (scalpels, forceps, catgut) et décrivait déjà comment opérer une grossesse extra-utérine ou réduire une fracture complexe.",
         tags: ["Chirurgie", "Outil", "Invention"],
         img: "assets/images/ep115_surgical_tools.png"
     },
@@ -42,7 +42,7 @@ const data_ep115 = [
         category: "Hygiène",
         content: "La Contagion",
         date: "Théorie",
-        detail: "Avicenne a soupçonné l'existence de micro-organismes invisibles transmettant les maladies par l'air ou l'eau. Il recommandait la quarantaine (40 jours) pour stopper les épidémies. <br><br><strong>Anecdote:</strong> 'La quarantaine' vient littéralement de ce concept adopté plus tard par Venise contre la peste.",
+        detail: "Avicenne a soupçonné l'existence de vecteurs invisibles transmettant les maladies par l'air ou l'eau. Il recommandait l'isolement de 40 jours pour stopper les épidémies, un concept qui donnera littéralement le mot 'quarantaine', adopté plus tard par Venise contre la peste.",
         tags: ["Virus", "Hygiène", "Visionnaire"],
         img: "assets/images/ep115_contagion.png"
     },
@@ -51,7 +51,7 @@ const data_ep115 = [
         category: "Psychologie",
         content: "L'Amour Maladie",
         date: "Psyché",
-        detail: "Un jour, il diagnostique un jeune prince qui dépérit. En prenant son pouls tout en nommant les quartiers de la ville, le pouls s'accélère à un nom précis. Avicenne comprend qu'il est amoureux d'une fille de ce quartier. Le remède ? Le mariage. <br><br><strong>Anecdote:</strong> Il est considéré comme un précurseur de la psychosomatique et de la psychiatrie.",
+        detail: "Précurseur de la psychosomatique, il a diagnostiqué un prince dépérissant d'amour en prenant son pouls tout en énumérant les quartiers de la ville ; le cœur s'est emballé à un nom précis. Le remède prescrit fut simple et efficace : le mariage.",
         tags: ["Psychologie", "Cœur", "Histoire"],
         img: "assets/images/ep115_pulse_check.png"
     },
@@ -60,7 +60,7 @@ const data_ep115 = [
         category: "Philosophie",
         content: "L'Homme Volant",
         date: "Expérience",
-        detail: "Avicenne a imaginé une expérience de pensée célèbre : un homme né dans le vide, flottant sans toucher, voir ni entendre. A-t-il conscience de lui-même ? Oui. Donc l'âme est distincte du corps. <br><br><strong>Anecdote:</strong> Cette idée influencera le 'Cogito' de Descartes 600 ans plus tard.",
+        detail: "Avicenne a imaginé l'expérience de l'homme volant : un homme né dans le vide, sans aucun sens, aurait tout de même conscience de lui-même. Cette preuve que l'âme est distincte du corps influencera directement le 'Cogito' de Descartes 600 ans plus tard.",
         tags: ["Philosophie", "Âme", "Europe"],
         img: "assets/images/ep115_flying_man.png"
     },
@@ -69,7 +69,7 @@ const data_ep115 = [
         category: "Pharmacopée",
         content: "L'Alchimie Médicale",
         date: "Chimie",
-        detail: "Il a classé des centaines de drogues et plantes. Il utilisait l'opium pour l'anesthésie (avec modération) et a perfectionné la distillation pour faire des huiles essentielles (comme l'eau de rose). <br><br><strong>Anecdote:</strong> Il critiquait pourtant les alchimistes qui cherchaient à transmuter le plomb en or, les traitant de charlatans.",
+        detail: "Il a classé des centaines de drogues, utilisant l'opium pour l'anesthésie et perfectionnant la distillation (eau de rose). Esprit scientifique, il critiquait sévèrement les alchimistes cherchant à transmuter le plomb en or, les traitant de charlatans.",
         tags: ["Chimie", "Drogue", "Plante"],
         img: "assets/images/ep115_pharmacy.png"
     },
@@ -78,7 +78,7 @@ const data_ep115 = [
         category: "Traduction",
         content: "L'École de Tolède",
         date: "1150",
-        detail: "Comment Avicenne est-il arrivé en Europe ? Par l'Espagne musulmane. À Tolède, après la Reconquista, des équipes mixtes (Juifs, Chrétiens, Musulmans) ont traduit ses livres de l'arabe au latin. <br><br><strong>Anecdote:</strong> Gérard de Crémone a traduit 87 livres à lui seul, dont le Canon. C'est le 'copier-coller' du savoir antique vers l'Occident.",
+        detail: "Après la Reconquista de Tolède, des équipes mixtes (Juifs, Chrétiens, Musulmans) ont traduit les livres d'Avicenne de l'arabe au latin. Gérard de Crémone a traduit 87 livres à lui seul, réalisant un véritable transfert de technologie du savoir antique et arabe vers l'Occident.",
         tags: ["Traduction", "Espagne", "Savoir"],
         img: "assets/images/ep115_translation_school.png"
     },
@@ -87,7 +87,7 @@ const data_ep115 = [
         category: "Erreur",
         content: "L'anatomie Galénique",
         date: "Limite",
-        detail: "Malgré son génie, Avicenne répétait certaines erreurs de Galien (comme le sang passant à travers la cloison du cœur). L'interdiction de la dissection humaine en Islam (et Christianisme) a freiné l'anatomie. <br><br><strong>Anecdote:</strong> C'est Ibn al-Nafis (au Caire, 13è siècle) qui découvrira la petite circulation sanguine, corrigeant Avicenne.",
+        detail: "Malgré son génie, Avicenne répétait certaines erreurs anatomiques de Galien, freiné par l'interdiction religieuse de la dissection. C'est Ibn al-Nafis (au Caire, 13è siècle) qui finira par corriger ces erreurs en découvrant la circulation pulmonaire.",
         tags: ["Erreur", "Anatomie", "Critique"],
         img: "assets/images/ep115_blood_circulation.png"
     },
@@ -96,7 +96,7 @@ const data_ep115 = [
         category: "Ophtalmologie",
         content: "La Cataracte",
         date: "Technique",
-        detail: "Les médecins arabes étaient les maîtres absolus des yeux (à cause des maladies oculaires du désert). Ils opéraient la cataracte avec une aiguille creuse pour aspirer le cristallin opaque. <br><br><strong>Anecdote:</strong> Il a fallu attendre le 18è siècle en Europe pour retrouver ce niveau de compétence.",
+        detail: "Les médecins arabes étaient les maîtres de l'ophtalmologie. Ils opéraient la cataracte avec une aiguille creuse pour aspirer le cristallin opaque. Il faudra attendre le 18è siècle pour que l'Europe retrouve un tel niveau de compétence chirurgicale oculaire.",
         tags: ["Oeil", "Opération", "Avance"],
         img: "assets/images/ep115_eye_surgery.png"
     },
@@ -105,7 +105,7 @@ const data_ep115 = [
         category: "Titre",
         content: "Sheikh al-Rais",
         date: "Titre",
-        detail: "On l'appelait le 'Sheikh al-Rais' (le Chef des Sages). En Europe, Dante le place dans les Limbes avec Homère et César, les grands païens vertueux. <br><br><strong>Anecdote:</strong> Des cratères sur la Lune portent son nom.",
+        detail: "Surnommé 'Sheikh al-Rais' (le Chef des Sages), sa renommée était telle que Dante, dans la Divine Comédie, le place dans les Limbes aux côtés d'Homère et de César, parmi les grands païens vertueux. Aujourd'hui, des cratères sur la Lune portent même son nom.",
         tags: ["Honneur", "Dante", "Lune"],
         img: "assets/images/ep115_limbo_dante.png"
     },
@@ -114,7 +114,7 @@ const data_ep115 = [
         category: "Comparaison",
         content: "Et l'Europe ?",
         date: "1000",
-        detail: "En l'an 1000, la médecine européenne était souvent superstitieuse (reliques, prières, saignées brutales). Un médecin franc en Terre Sainte a un jour choqué les Arabes en coupant une jambe à la hache pour un petit abcès. <br><br><strong>Anecdote:</strong> Oussama Ibn Mounqidh raconte cette anecdote avec horreur dans ses mémoires.",
+        detail: "En l'an 1000, la médecine européenne était souvent superstitieuse. L'écrivain arabe Oussama Ibn Mounqidh raconte avec horreur comment un médecin franc en Terre Sainte a amputé une jambe à la hache pour un simple abcès, illustrant le fossé technologique de l'époque.",
         tags: ["Europe", "MoyenÂge", "Choc"],
         img: "assets/images/ep115_bad_doctor.png"
     },
@@ -123,7 +123,7 @@ const data_ep115 = [
         category: "Héritage",
         content: "La Méthode",
         date: "Science",
-        detail: "Avicenne a introduit la logique aristotélicienne en médecine : observation, hypothèse, expérimentation. Il a testé les médicaments sur les animaux avant les humains. <br><br><strong>Anecdote:</strong> C'est la base des essais cliniques modernes.",
+        detail: "Avicenne a introduit la logique aristotélicienne en médecine : observation, hypothèse, expérimentation. Il insistait pour tester les médicaments sur les animaux avant les humains, posant les bases des essais cliniques modernes.",
         tags: ["Logique", "Science", "Méthode"],
         img: "assets/images/ep115_experiment.png"
     },
@@ -132,7 +132,7 @@ const data_ep115 = [
         category: "Fin",
         content: "Le Mausolée",
         date: "Hamadan",
-        detail: "Sa tombe est à Hamadan en Iran. C'est un héros national. <br><br><strong>Anecdote:</strong> Il écrivait aussi des quatrains (Rubaiyat) sur le vin et la vie, un peu comme Omar Khayyam : 'Bois du vin, c’est lui la vie éternelle'.",
+        detail: "Sa tombe se trouve à Hamadan en Iran, où il est vénéré comme un héros national. Poète à ses heures, il écrivait des quatrains sur le vin et la vie, rappelant ceux d'Omar Khayyam : 'Bois du vin, c’est lui la vie éternelle'.",
         tags: ["Iran", "Poésie", "Vin"],
         img: "assets/images/ep115_tomb.png"
     }

@@ -1,0 +1,41 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Users Collection
+    // - Read: Allowed for everyone (needed for daily/all-time leaderboard to read pseudo/scores)
+    // - Write: Allowed only if the user is modifying their own document
+    match /users/{userId} {
+      allow read: if true;
+      allow write: if request.auth != null && (
+        request.auth.uid == userId || 
+        (request.resource.data.diff(resource.data).affectedKeys().hasOnly(['friends']))
+      );
+    }
+
+    // Quiz Results Collection (New)
+    // - Read: Allowed for everyone (needed to display the "Recent Quizzes" list)
+    // - Create: Allowed for any authenticated user (to save their score)
+    // - Update/Delete: Denied (History should be immutable for now)
+    match /quizResults/{resultId} {
+      allow read: if true;
+      allow create: if request.auth != null && request.resource.data.userId == request.auth.uid;
+    }
+
+    // Friend Requests
+    match /friendRequests/{requestId} {
+      allow read: if request.auth != null; // Allow query filters to work
+      allow create: if request.auth != null && request.resource.data.fromId == request.auth.uid;
+      allow update: if request.auth != null && (resource.data.fromId == request.auth.uid || resource.data.toId == request.auth.uid);
+    }
+
+    // Duels
+    match /duels/{duelId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null;
+      allow start: if request.auth != null;
+      allow update: if request.auth != null;
+      allow delete: if request.auth != null && resource.data.challengerId == request.auth.uid;
+    }
+  }
+}

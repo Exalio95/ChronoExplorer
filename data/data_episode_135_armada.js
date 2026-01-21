@@ -6,7 +6,7 @@ const data_ep135 = [
         category: "Guerre",
         content: "David contre Goliath",
         date: "Chiffres",
-        detail: "Philippe II d'Espagne envoie la 'Grande et Félicissime Armada' (son vrai nom) pour envahir l'Angleterre, renverser la protestante Elisabeth Ière et rétablir le catholicisme. 130 navires énormes contre une flotte anglaise de corsaires agiles. <br><br><strong>Anecdote:</strong> C'était la plus grande flotte jamais vue dans l'Atlantique.",
+        detail: "Philippe II d'Espagne envoie la 'Grande et Félicissime Armada' (c'était son vrai nom, bien moins prétentieux) pour envahir l'Angleterre et renverser la protestante Elisabeth Ière. Avec 130 navires énormes, c'était la plus grande flotte jamais vue dans l'Atlantique, face à des corsaires anglais bien plus modestes.",
         tags: ["Espagne", "Angleterre", "Religion"],
         img: "assets/images/ep135_armada_portrait.png"
     },
@@ -15,7 +15,7 @@ const data_ep135 = [
         category: "Reine",
         content: "Elisabeth Ière",
         date: "Tilbury",
-        detail: "La reine vierge, en armure sur un cheval blanc, harangue ses troupes à Tilbury : 'Je sais que j'ai le corps d'une faible femme, mais j'ai le cœur et l'estomac d'un Roi, et d'un Roi d'Angleterre !'. <br><br><strong>Anecdote:</strong> L'un des plus grands discours de l'histoire britannique.",
+        detail: "La reine vierge, montée sur un cheval blanc et en demi-armure, a harangué ses troupes à Tilbury avec l'un des plus grands discours de l'histoire britannique : 'Je sais que j'ai le corps d'une faible femme, mais j'ai le cœur et l'estomac d'un Roi, et d'un Roi d'Angleterre !'.",
         tags: ["Discours", "Femme", "Courage"],
         img: "assets/images/ep135_elizabeth_tilbury.png"
     },
@@ -24,7 +24,7 @@ const data_ep135 = [
         category: "Héros",
         content: "Francis Drake",
         date: "Le Corsaire",
-        detail: "Le vice-amiral anglais était Francis Drake, un pirate anobli qui avait fait le tour du monde. La légende dit qu'il jouait aux boules (bowls) quand l'Armada a été vue. Il a dit : 'On a le temps de finir la partie ET de battre les Espagnols'. <br><br><strong>Anecdote:</strong> Sang-froid légendaire (ou propagande).",
+        detail: "Le vice-amiral anglais était Francis Drake, un pirate anobli. La légende (ou la propagande) raconte qu'il jouait aux boules quand l'Armada a été aperçue, et qu'il aurait répliqué avec un sang-froid absolu : 'On a le temps de finir la partie ET de battre les Espagnols'.",
         tags: ["Pirate", "Héros", "Jeu"],
         img: "assets/images/ep135_drake_bowls.png"
     },
@@ -33,7 +33,7 @@ const data_ep135 = [
         category: "Tactique",
         content: "Les Brûlots de Calais",
         date: "Feu",
-        detail: "L'Armada était ancrée au large de Calais. Dans la nuit, les Anglais ont envoyé 8 vieux navires en feu (brûlots) dériver vers eux. Paniqués, les capitaines espagnols ont coupé leurs ancres pour fuir dans le désordre. <br><br><strong>Anecdote:</strong> Ils ont perdu leur formation en croissant (leur force) et ne l'ont jamais retrouvée.",
+        detail: "L'Armada était ancrée au large de Calais. Dans la nuit, les Anglais ont envoyé 8 'brûlots' (vieux navires en feu) dériver vers eux. Paniqués, les capitaines espagnols ont coupé leurs ancres pour fuir, brisant leur formation en croissant imprenable qu'ils ne réussiront jamais à reformer.",
         tags: ["Feu", "Ruse", "Panique"],
         img: "assets/images/ep135_fireships.png"
     },
@@ -42,7 +42,7 @@ const data_ep135 = [
         category: "Bataille",
         content: "Gravelines",
         date: "Artillerie",
-        detail: "La bataille décisive. Les navires anglais, plus rapides et tirant de plus loin, ont harcelé les lourds galions espagnols sans jamais se laisser aborder. Les Espagnols avaient les mauvaises munitions (boulets trop gros pour leurs canons ?). <br><br><strong>Anecdote:</strong> Une révolution : la fin de l'abordage, le début du duel d'artillerie.",
+        detail: "À la bataille de Gravelines, les navires anglais, plus rapides et tirant de plus loin, ont harcelé les lourds galions espagnols sans jamais se laisser aborder. Ce fut une révolution militaire : la fin des batailles d'abordage et le début des duels d'artillerie navale.",
         tags: ["Bataille", "Canon", "Technologie"],
         img: "assets/images/ep135_gravelines_battle.png"
     },
@@ -51,7 +51,7 @@ const data_ep135 = [
         category: "Climat",
         content: "Le Vent Protestant",
         date: "Tempête",
-        detail: "Ce n'est pas la bataille qui a détruit l'Armada, c'est la météo. En fuyant par le Nord (autour de l'Écosse et de l'Irlande), ils ont subi des tempêtes terribles. Les navires se sont fracassés sur les côtes rocheuses. <br><br><strong>Anecdote:</strong> Les Anglais ont frappé une médaille : 'Dieu a soufflé et ils ont été dispersés' (Flavit Jehovah et Dissipati Sunt).",
+        detail: "Ce n'est pas la bataille qui a détruit l'Armada, c'est la météo. En fuyant par le Nord de l'Écosse, ils ont subi des tempêtes terribles. Les Anglais ont frappé une médaille célèbre : 'Dieu a soufflé et ils ont été dispersés' (Flavit Jehovah et Dissipati Sunt), attribuant la victoire à une intervention divine.",
         tags: ["Météo", "Dieu", "Chance"],
         img: "assets/images/ep135_storm_wreck.png"
     },
@@ -60,7 +60,7 @@ const data_ep135 = [
         category: "Irlande",
         content: "Massacre des naufragés",
         date: "Tragédie",
-        detail: "Les marins espagnols naufragés sur les côtes d'Irlande pensaient être accueillis par des catholiques. Au lieu de cela, ils ont été massacrés par les locaux (pour le pillage) ou exécutés par les soldats anglais. <br><br><strong>Anecdote:</strong> Quelques survivants sont restés ('Black Irish' ? légende génétique).",
+        detail: "Les marins espagnols naufragés sur les côtes d'Irlande pensaient être aidés par leurs co-religionnaires catholiques. Au lieu de cela, ils ont été massacrés par les locaux pour le pillage ou exécutés sommairement par les garnisons anglaises. Quelques survivants restés sur place seraient à l'origine de la légende des 'Black Irish'.",
         tags: ["Naufrage", "Mort", "Irlande"],
         img: "assets/images/ep135_shipwreck_ireland.png"
     },
@@ -69,7 +69,7 @@ const data_ep135 = [
         category: "Maladie",
         content: "L'eau pourrie",
         date: "Logistique",
-        detail: "L'Armada a été mal préparée. Les tonneaux d'eau étaient en bois vert et ont pourri rapidement. Les hommes buvaient de l'eau verte et mouraient de dysenterie avant même le combat. <br><br><strong>Anecdote:</strong> La corruption des fournisseurs a tué plus d'Espagnols que les canons anglais.",
+        detail: "L'Armada a été vaincue par sa logistique défaillante. Les tonneaux d'eau, fabriqués en bois vert, ont pourri rapidement. Les hommes buvaient de l'eau verte et mouraient de dysenterie par milliers avant même de voir un Anglais. La corruption des fournisseurs a tué plus d'Espagnols que les canons de Drake.",
         tags: ["Maladie", "Eau", "Corruption"],
         img: "assets/images/ep135_rotten_barrels.png"
     },
@@ -78,7 +78,7 @@ const data_ep135 = [
         category: "Conséquence",
         content: "L'essor de l'Angleterre",
         date: "Empire",
-        detail: "Si l'Armada avait gagné, l'Angleterre serait devenue catholique et espagnole. Pas d'Empire Britannique, pas d'États-Unis anglophones. 1588 est la date de naissance de la puissance navale anglaise. <br><br><strong>Anecdote:</strong> 'Rule Britannia' commence ici.",
+        detail: "Si l'Armada avait gagné, l'Angleterre serait devenue espagnole et catholique. Pas d'Empire Britannique, pas d'États-Unis anglophones. 1588 est la date de naissance de la puissance navale anglaise. C'est ici que commence véritablement 'Rule Britannia'.",
         tags: ["Futur", "Angleterre", "Marine"],
         img: "assets/images/ep135_british_empire_map.png"
     },
@@ -87,7 +87,7 @@ const data_ep135 = [
         category: "Échec",
         content: "Je l'ai envoyée contre les hommes...",
         date: "Philippe II",
-        detail: "Quand Philippe II a appris le désastre, il a réagi avec un flegme stoïque : 'J'ai envoyé ma flotte combattre les hommes, pas les éléments et la volonté de Dieu'. Il a ruiné l'Espagne pour construire cette flotte. <br><br><strong>Anecdote:</strong> Le début du lent déclin espagnol.",
+        detail: "Apprenant le désastre qui ruinait l'Espagne, Philippe II a réagi avec un flegme stoïque légendaire : 'J'ai envoyé ma flotte combattre les hommes, pas les éléments et la volonté de Dieu'. C'était le début du lent déclin de la puissance espagnole.",
         tags: ["Citation", "Déclin", "Stoïcisme"],
         img: "assets/images/ep135_philip_ii.png"
     },
@@ -96,7 +96,7 @@ const data_ep135 = [
         category: "Navire",
         content: "Girona",
         date: "Archéologie",
-        detail: "L'épave du galéasse Girona a été retrouvée en 1967 en Irlande du Nord. On y a trouvé des bijoux en or incroyables (salamandres de rubis), montrant la richesse de la noblesse espagnole à bord. <br><br><strong>Anecdote:</strong> Ils partaient à la guerre comme à la parade.",
+        detail: "L'épave du galéasse Girona, retrouvée en 1967 en Irlande, contenait des trésors incroyables, dont des salamandres en or et rubis. Cela montre que la noblesse espagnole partait à la guerre avec tout son luxe, comme à la parade, ce qui les a peut-être alourdis fatalement.",
         tags: ["Trésor", "Or", "Archéologie"],
         img: "assets/images/ep135_girona_gold.png"
     },
@@ -105,7 +105,7 @@ const data_ep135 = [
         category: "Technique",
         content: "Les signes",
         date: "Communication",
-        detail: "Comment diriger 130 navires sans radio ? Avec des tirs de canon codés, des lanternes la nuit, et des drapeaux. Mais dans la tempête, le système s'est effondré. <br><br><strong>Anecdote:</strong> Le 'chaos de la bataille' est réel.",
+        detail: "Diriger 130 navires sans radio était un cauchemar. Ils utilisaient des tirs de canon codés et des lanternes. Mais dans le chaos de la tempête, ce système s'est effondré, laissant chaque capitaine seul face à son destin. Le 'brouillard de guerre' était total.",
         tags: ["Signal", "Communication", "Problème"],
         img: "assets/images/ep135_lantern_signal.png"
     },
@@ -114,7 +114,7 @@ const data_ep135 = [
         category: "Symbole",
         content: "Pas si invincible",
         date: "Nom",
-        detail: "Le nom 'Invincible Armada' a été donné par ironie par les Anglais après la victoire. Les Espagnols ne l'appelaient jamais comme ça. <br><br><strong>Anecdote:</strong> L'histoire est écrite par les vainqueurs.",
+        detail: "Le nom 'Invincible Armada' n'a jamais été utilisé par les Espagnols. Ce sont les Anglais qui l'ont baptisée ainsi après la victoire, par ironie pure. Comme souvent, l'histoire et les noms sont écrits par les vainqueurs.",
         tags: ["Nom", "Ironie", "Histoire"],
         img: "assets/images/ep135_defeat_medal.png"
     },
@@ -123,7 +123,7 @@ const data_ep135 = [
         category: "Cuisine",
         content: "La Pomme de Terre (encore)",
         date: "Légende",
-        detail: "Une légende dit que des pommes de terre ont échoué sur les plages d'Irlande depuis les épaves de l'Armada, introduisant le tubercule dans l'île. C'est probablement faux (introduite avant), mais l'histoire plaît. <br><br><strong>Anecdote:</strong> Les Irlandais et la patate, une longue histoire.",
+        detail: "Une légende tenace raconte que les pommes de terre sont arrivées en Irlande grâce aux épaves de l'Armada échouées sur les plages. C'est probablement faux historiquement, mais cela illustre poétiquement le lien tragique entre l'Irlande, l'Espagne et ce tubercule.",
         tags: ["Légende", "Irlande", "Nourriture"],
         img: "assets/images/ep135_potato_ireland.png"
     },
@@ -132,7 +132,7 @@ const data_ep135 = [
         category: "Conclusion",
         content: "Le tournant",
         date: "Europe",
-        detail: "1588 marque la fin de l'hégémonie catholique en Europe du Nord. Le protestantisme est sauvé. Les Pays-Bas (en révolte contre l'Espagne) respirent. L'Europe est définitivement divisée en deux camps. <br><br><strong>Anecdote:</strong> Une guerre froide religieuse.",
+        detail: "1588 sauve le protestantisme en Europe du Nord et permet aux Pays-Bas de respirer dans leur lutte contre l'Espagne. L'Europe est désormais durablement divisée en deux camps, inaugurant une sorte de guerre froide religieuse.",
         tags: ["Religion", "Europe", "Guerre"],
         img: "assets/images/ep135_europe_religion_map.png"
     }

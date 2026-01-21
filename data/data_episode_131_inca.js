@@ -6,7 +6,7 @@ const data_ep131 = [
         category: "Empereur",
         content: "Pachacutec",
         date: "Celui qui retourne le monde",
-        detail: "C'est l'Alexandre le Grand des Andes. En 1438, il a transformé le petit royaume de Cusco en un immense empire (Tawantinsuyu). Son nom signifie 'Celui qui secoue la terre' ou 'Le Réformateur'. <br><br><strong>Anecdote:</strong> Il n'était pas l'héritier prévu, mais il a sauvé la ville d'une invasion Chanca alors que son père et son frère avaient fui.",
+        detail: "C'est l'Alexandre le Grand des Andes. En 1438, il a transformé le petit royaume de Cusco en un immense empire (Tawantinsuyu). Son nom signifie 'Celui qui secoue la terre'. Il n'était pas l'héritier prévu, mais a pris le pouvoir en sauvant la ville d'une invasion alors que son père et son frère avaient fui.",
         tags: ["Héros", "Empire", "Nom"],
         img: "assets/images/ep131_pachacutec_statue.png"
     },
@@ -15,7 +15,7 @@ const data_ep131 = [
         category: "Architecture",
         content: "Machu Picchu",
         date: "Résidence d'été",
-        detail: "C'est Pachacutec qui a fait construire le Machu Picchu comme domaine royal (et religieux). Abandonné lors de la conquête espagnole et oublié pendant 400 ans jusqu'à Hiram Bingham en 1911. <br><br><strong>Anecdote:</strong> Les Espagnols ne l'ont jamais trouvé, c'est pourquoi il est intact.",
+        detail: "C'est Pachacutec qui a fait construire le Machu Picchu comme domaine royal. Abandonné lors de la conquête et oublié pendant 400 ans, il ne fut redécouvert qu'en 1911 par Hiram Bingham. Les Espagnols ne l'ont jamais trouvé, c'est pourquoi il est le seul site inca resté totalement intact.",
         tags: ["Ruine", "Montagne", "Secret"],
         img: "assets/images/ep131_machu_picchu.png"
     },
@@ -24,7 +24,7 @@ const data_ep131 = [
         category: "Pierre",
         content: "Murs cyclopéens",
         date: "Puzzle",
-        detail: "L'architecture inca est célèbre pour ses murs en pierres sèches ajustées au millimètre près, sans mortier. Une lame de rasoir ne passe pas entre les blocs. Ces murs résistent aux tremblements de terre (ils 'dansent' et se remettent en place). <br><br><strong>Anecdote:</strong> La pierre aux 12 angles de Cusco.",
+        detail: "L'architecture inca est célèbre pour ses murs en pierres sèches ajustées au millimètre, sans mortier. Une lame de rasoir ne passe pas entre les blocs. Ces murs sont conçus pour 'danser' pendant les tremblements de terre et se remettre en place, là où les constructions coloniales s'effondrent.",
         tags: ["Technique", "Pierre", "Séisme"],
         img: "assets/images/ep131_12_angle_stone.png"
     },
@@ -33,7 +33,7 @@ const data_ep131 = [
         category: "Route",
         content: "Qhapaq Ñan",
         date: "Réseau",
-        detail: "Les Incas ont construit 30 000 km de routes pavées à travers les montagnes les plus hostiles du monde (les Andes). Sans roue, sans cheval, sans fer ! Seuls les lamas et les messagers à pied (Chasquis) les utilisaient. <br><br><strong>Anecdote:</strong> Un message (ou du poisson frais) pouvait aller de Lima à Cusco en 2 jours grâce aux relais.",
+        detail: "Les Incas ont construit 30 000 km de routes pavées à travers les Andes, sans roue, sans cheval et sans fer ! Seuls les lamas et les messagers à pied (Chasquis) les utilisaient. Grâce aux relais, un message (ou du poisson frais) pouvait aller de Lima à Cusco (600km de montagne) en seulement 2 jours.",
         tags: ["Route", "Messager", "Exploit"],
         img: "assets/images/ep131_inca_road.png"
     },
@@ -42,7 +42,7 @@ const data_ep131 = [
         category: "Écriture",
         content: "Quipu (Khipu)",
         date: "Nœuds",
-        detail: "Les Incas sont la seule civilisation avancée sans écriture classique. Ils utilisaient des cordelettes à nœuds (Quipus) pour la comptabilité et (peut-être) pour raconter des histoires. <br><br><strong>Anecdote:</strong> On sait lire les chiffres, mais on a perdu le code pour les mots.",
+        detail: "Les Incas sont la seule civilisation impériale sans système d'écriture classique. Ils utilisaient des cordelettes à nœuds complexes (Quipus) pour la comptabilité et la mémoire. Si nous savons déchiffrer les chiffres, le code pour les mots et les concepts abstraits est malheureusement perdu.",
         tags: ["Écriture", "Nœud", "Mystère"],
         img: "assets/images/ep131_quipu.png"
     },
@@ -51,7 +51,7 @@ const data_ep131 = [
         category: "Agriculture",
         content: "Terrasses (Andenes)",
         date: "Montagne",
-        detail: "Pour cultiver en montagne, ils ont sculpté les versants en terrasses irriguées. Cela créait des microclimats (plus chaud en bas). Ils ont inventé la pomme de terre lyophilisée (Chuño) en l'exposant au gel la nuit et au soleil le jour. <br><br><strong>Anecdote:</strong> Moray est un laboratoire agricole circulaire fascinant.",
+        detail: "Pour cultiver en montagne, ils ont sculpté les versants en terrasses irriguées, créant des microclimats. Ils ont aussi inventé la lyophilisation : le Chuño (pomme de terre) était exposé alternativement au gel nocturne et au soleil brûlant pour être conservé des années.",
         tags: ["Agriculture", "PommeDeTerre", "Génie"],
         img: "assets/images/ep131_moray_terraces.png"
     },
@@ -60,7 +60,7 @@ const data_ep131 = [
         category: "Économie",
         content: "Socialisme Inca ?",
         date: "Mita",
-        detail: "Il n'y avait pas de monnaie, ni de marché, ni de commerce privé. L'État possédait tout et redistribuait la nourriture et les vêtements (almacenes). En échange, le peuple devait la 'Mita' (corvée de travail). Personne n'avait faim, mais personne n'était libre. <br><br><strong>Anecdote:</strong> Un communisme théocratique ?",
+        detail: "Il n'y avait pas de monnaie, ni de marché privé. L'État possédait tout et redistribuait les ressources. En échange, le peuple devait la 'Mita' (corvée de travail). C'était une sorte de 'communisme théocratique' où personne n'avait faim, mais où personne n'était libre.",
         tags: ["Économie", "Travail", "Société"],
         img: "assets/images/ep131_qollqa_silos.png"
     },
@@ -69,7 +69,7 @@ const data_ep131 = [
         category: "Religion",
         content: "Inti et Viracocha",
         date: "Soleil",
-        detail: "L'Inca (l'empereur) était le fils du Soleil (Inti). On ne le regardait pas dans les yeux. Il portait des vêtements neufs chaque jour (les anciens étaient brûlés). À sa mort, sa momie continuait à 'régner' et à posséder ses terres. <br><br><strong>Anecdote:</strong> Le nouvel empereur devait conquérir de nouvelles terres car il n'héritait de rien !",
+        detail: "L'Inca était le fils du Soleil (Inti). On ne le regardait pas dans les yeux. À sa mort, sa momie continuait à 'régner' et à posséder ses terres. Cela obligeait chaque nouvel empereur à conquérir de NOUVELLES terres pour se constituer son propre patrimoine, poussant l'empire à l'expansion perpétuelle.",
         tags: ["Dieu", "Soleil", "Momie"],
         img: "assets/images/ep131_inti_mask.png"
     },
@@ -78,7 +78,7 @@ const data_ep131 = [
         category: "Médecine",
         content: "Trépanation",
         date: "Crâne",
-        detail: "Les Incas pratiquaient la chirurgie du crâne (trépanation) avec succès (taux de survie de 80% !). Ils utilisaient le coca et la chicha comme anesthésiant. <br><br><strong>Anecdote:</strong> Ils rebouchaient parfois le trou avec une plaque d'or.",
+        detail: "Les guerriers incas soignaient les traumatismes crâniens par trépanation (percer le crâne) avec un taux de survie impressionnant de 80%. Ils utilisaient la coca et la chicha comme anesthésiants, et rebouchaient parfois le trou avec une plaque d'or.",
         tags: ["Médecine", "Crâne", "Survie"],
         img: "assets/images/ep131_trepanation_skull.png"
     },
@@ -87,7 +87,7 @@ const data_ep131 = [
         category: "Sacrifice",
         content: "Capacocha",
         date: "Enfants",
-        detail: "Lors des grandes occasions (mort de l'Inca, séisme), on sacrifiait des enfants parfaits au sommet des montagnes glacées. La momie 'Juanita' (la jeune fille des glaces) a été retrouvée parfaitement conservée en 1995. <br><br><strong>Anecdote:</strong> Ils étaient drogués et mouraient de froid dans leur sommeil, 'envoyés aux anges'.",
+        detail: "Lors des grandes catastrophes, on sacrifiait des enfants 'parfaits' au sommet des montagnes glacées. La momie 'Juanita', retrouvée en 1995, est l'une d'elles. Ils étaient drogués et mouraient de froid dans leur sommeil, considérés comme des ambassadeurs envoyés aux dieux.",
         tags: ["Sacrifice", "Enfant", "Montagne"],
         img: "assets/images/ep131_juanita_mummy.png"
     },
@@ -96,7 +96,7 @@ const data_ep131 = [
         category: "Animal",
         content: "Le Lama et l'Alpaga",
         date: "Laine",
-        detail: "Les seuls animaux de bât d'Amérique. Ils fournissaient la laine, la viande, et transportaient les charges. Mais ils ne pouvaient pas porter un homme. Donc pas de cavalerie inca. <br><br><strong>Anecdote:</strong> L'Inca s'habillait en laine de Vigogne (la plus fine du monde), réservée à la noblesse.",
+        detail: "Seuls animaux de bât d'Amérique du Sud, ils fournissaient laine et transport, mais ne pouvaient porter un homme. L'absence de chevaux ou de bœufs a limité le développement technologique inca. L'empereur, lui, s'habillait en laine de Vigogne, la fibre la plus fine et précieuse du monde.",
         tags: ["Animal", "Lama", "Textile"],
         img: "assets/images/ep131_vicuna.png"
     },
@@ -105,7 +105,7 @@ const data_ep131 = [
         category: "Langue",
         content: "Quechua",
         date: "Parole",
-        detail: "Pachacutec a imposé le Quechua comme langue officielle de l'empire (Lingua Franca). Elle est encore parlée par 10 millions de personnes aujourd'hui. <br><br><strong>Anecdote:</strong> 'Puma', 'Condor', 'Quinoa', 'Pampa' sont des mots Quechua.",
+        detail: "Pachacutec a imposé le Quechua comme langue unificatrice de l'empire. Elle est encore parlée par 10 millions de personnes. Des mots comme 'Puma', 'Condor', 'Quinoa', 'Pampa' ou 'Lama' sont passés du Quechua au français.",
         tags: ["Langue", "Héritage", "Mots"],
         img: "assets/images/ep131_quechua_people.png"
     },
@@ -114,7 +114,7 @@ const data_ep131 = [
         category: "Fin",
         content: "Guerre civile et Variole",
         date: "1527",
-        detail: "Avant même l'arrivée de Pizarro, la variole européenne a décimé l'empire (tuant l'empereur Huayna Capac). Une guerre civile fratricide (Atahualpa vs Huascar) a suivi. Pizarro est arrivé au pire moment possible pour les Incas, au meilleur pour lui. <br><br><strong>Anecdote:</strong> 180 Espagnols ont conquis un empire de 10 millions d'habitants.",
+        detail: "Avant même l'arrivée de Pizarro, la variole européenne (arrivée via le commerce) a décimé l'empire et tué l'empereur, déclenchant une guerre civile fratricide. Pizarro et ses 180 hommes ont eu une chance inouïe : ils sont arrivés dans un empire en plein chaos autodestructeur.",
         tags: ["Chute", "Maladie", "Conquête"],
         img: "assets/images/ep131_atahualpa_pizarro.png"
     },
@@ -123,7 +123,7 @@ const data_ep131 = [
         category: "Or",
         content: "La chambre d'Atahualpa",
         date: "Rançon",
-        detail: "Capturé, l'empereur Atahualpa a proposé de remplir sa cellule d'or jusqu'à hauteur de bras levé en échange de sa liberté. Pizarro a accepté, a pris l'or (6 tonnes), puis a tué Atahualpa quand même (garrot). <br><br><strong>Anecdote:</strong> La plus grosse rançon de l'histoire.",
+        detail: "Capturé par surprise, l'empereur Atahualpa a proposé de remplir sa cellule d'or jusqu'au plafond en échange de sa liberté. Pizarro a accepté, a empoché les 6 tonnes d'or (la plus grosse rançon de l'histoire), puis a fait exécuter l'empereur quand même. Une trahison infâme.",
         tags: ["Or", "Trahison", "Honte"],
         img: "assets/images/ep131_ransom_room.png"
     },
@@ -132,7 +132,7 @@ const data_ep131 = [
         category: "Conclusion",
         content: "Le soleil s'est couché",
         date: "1572",
-        detail: "La résistance a duré jusqu'en 1572 (Vilcabamba). Tupac Amaru, le dernier inca, a été exécuté. Une prophétie (Inkarri) dit que sa tête et son corps se réuniront un jour sous terre et que l'Inca reviendra restaurer l'ordre du monde. <br><br><strong>Anecdote:</strong> Le rappeur Tupac Shakur porte son nom.",
+        detail: "La résistance a duré jusqu'en 1572. Le dernier inca, Tupac Amaru, a été écartelé. Une légende dit que sa tête et son corps se réuniront un jour pour restaurer l'ordre du monde (Inkarri). Pour l'anecdote, le rappeur Tupac Shakur a été nommé en son honneur.",
         tags: ["Fin", "Espoir", "Prophétie"],
         img: "assets/images/ep131_tupac_amaru.png"
     }

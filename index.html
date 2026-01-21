@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chrono-Explorer | Annecdote</title>
+    <title>Chrono-Explorer v2 | Annecdote</title>
     <!-- Modern Font -->
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Merriweather:ital,wght@0,300;0,400;1,400&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="explorer.css">
+    <!-- CORE LOGIC (Import Translations First) -->
+    <script src="translations.js?v=1.0"></script>
+    <link rel="stylesheet" href="explorer.css?v=20260110_2200">
+    <link rel="stylesheet" href="social.css?v=20260110_2300">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -23,59 +26,76 @@
         </div>
         <div class="search-container">
             <i class="fa-solid fa-search"></i>
-            <input type="text" id="searchInput" placeholder="Rechercher une époque, un événement, un tag...">
+            <input type="text" id="searchInput" data-i18n-placeholder="header.search_placeholder"
+                placeholder="Rechercher une époque, un événement, un tag...">
         </div>
         <div class="stats-badge">
-            <span id="cardCount">0</span> Cartes
+            <span id="cardCount">0</span> <span data-i18n="header.stats_cards">Cartes</span>
         </div>
+
+        <!-- Language Switcher -->
+        <button id="langToggleBtn" class="btn-glass-small" style="margin-left: auto; margin-right: 10px;">
+            <i class="fa-solid fa-globe"></i> <span id="currentLangLabel">FR</span>
+        </button>
+
+        <!-- Quiz Button -->
+        <button id="headerQuizBtn" class="btn-glass-small" style="margin-right: 10px;"
+            onclick="document.getElementById('quizConfigModal').classList.remove('hidden')">
+            <i class="fa-solid fa-gamepad"></i> <span data-i18n="header.quiz">Quizz</span>
+        </button>
+
         <div id="userProfile" class="user-profile">
+            <button id="headerSocialBtn" class="btn-glass-small" style="margin-right: 10px; display:none;">
+                <i class="fa-solid fa-users"></i> <span data-i18n="header.social">Social</span>
+            </button>
             <button id="headerLoginBtn" class="btn-glass-small"
                 onclick="document.getElementById('loginModal').classList.remove('hidden')">
-                <i class="fa-brands fa-google"></i> Connexion
+                <i class="fa-brands fa-google"></i> <span data-i18n="header.login">Connexion</span>
             </button>
+            <!-- Injected via JS -->
         </div>
     </header>
 
     <div class="app-layout">
         <!-- Mobile Filter Toggle -->
         <button id="toggleFiltersBtn" class="mobile-filter-toggle">
-            <i class="fa-solid fa-filter"></i> Filtres
+            <i class="fa-solid fa-filter"></i> <span data-i18n="filters.title">Filtres</span>
         </button>
 
         <!-- Sidebar Filters -->
         <aside class="sidebar glass-panel">
-            <h3><i class="fa-solid fa-filter"></i> Filtres</h3>
+            <h3><i class="fa-solid fa-filter"></i> <span data-i18n="filters.title">Filtres</span></h3>
 
             <div class="filter-section">
-                <h4>Époques</h4>
+                <h4 data-i18n="filters.eras">Époques</h4>
                 <div class="checkbox-group" id="eraFilters">
                     <!-- Injected via JS -->
                 </div>
             </div>
 
             <div class="filter-section">
-                <h4>Importance</h4>
+                <h4 data-i18n="filters.priority">Importance</h4>
                 <div class="checkbox-group" id="priorityFilters">
                     <!-- Injected via JS -->
                 </div>
             </div>
 
             <div class="filter-section">
-                <h4>Thèmes Populaires</h4>
+                <h4 data-i18n="filters.tags">Thèmes Populaires</h4>
                 <div class="tags-cloud" id="tagFilters">
                     <!-- Injected via JS -->
                 </div>
             </div>
 
             <button id="resetFilters" class="btn-reset">
-                <i class="fa-solid fa-rotate-right"></i> Réinitialiser
+                <i class="fa-solid fa-rotate-right"></i> <span data-i18n="filters.reset">Réinitialiser</span>
             </button>
         </aside>
 
         <!-- Main Content -->
         <main class="main-content">
             <div class="content-header">
-                <h2>Exploration Temporelle</h2>
+                <h2 data-i18n="content.header">Exploration Temporelle</h2>
 
             </div>
 
@@ -85,8 +105,9 @@
 
             <div id="noResults" class="hidden">
                 <i class="fa-solid fa-wind"></i>
-                <p>Aucun résultat trouvé dans les archives du temps.</p>
+                <p data-i18n="content.no_results">Aucun résultat trouvé dans les archives du temps.</p>
             </div>
+
         </main>
     </div>
 
@@ -104,14 +125,17 @@
             <p style="margin-bottom: 2rem;">Connectez-vous pour sauvegarder votre progression et retrouver vos épisodes
                 vus.</p>
 
-            <button onclick="auth.signInWithGoogle()" class="btn-google"
+            <button
+                onclick="if(window.auth) window.auth.signInWithGoogle(); else alert('Erreur : Le script d\'authentification (auth.js) n\'est pas chargé. Rafraîchissez la page.');"
+                class="btn-google"
                 style="margin-bottom: 1rem; width: 100%; padding: 1rem; border-radius: 12px; border: none; background: white; color: #333; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;">
                 <i class="fa-brands fa-google" style="color: #4285F4;"></i> Continuer avec Google
             </button>
 
             <button
                 onclick="document.getElementById('loginModal').classList.add('hidden'); localStorage.setItem('auth_refused', 'true');"
-                class="btn-text" style="color: rgba(255,255,255,0.6);">
+                class="btn-text"
+                style="color: rgba(255,255,255,0.6); background: none; border: none; padding: 0.5rem; text-decoration: underline; cursor: pointer;">
                 Non merci, je visiterai en invité
             </button>
         </div>
@@ -148,11 +172,173 @@
                     style="background: var(--accent-gold); color: black;">Aujourd'hui</button>
                 <button id="btnAllTime" onclick="auth.switchLeaderboard('total')" class="btn-glass-small">Tout les
                     temps</button>
+                <button id="btnQuiz" onclick="auth.switchLeaderboard('quiz')" class="btn-glass-small"><i
+                        class="fa-solid fa-dice"></i> Derniers Quizz</button>
             </div>
 
             <div id="leaderboardList" style="text-align: left; max-height: 400px; overflow-y: auto;">
                 <!-- Leaderboard items will be injected here -->
                 <p style="text-align:center; color:#888;">Chargement...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOCIAL MODAL -->
+    <div id="socialModal" class="modal hidden" style="z-index: 2400;">
+        <div class="modal-content glass-panel"
+            style="max-width: 500px; min-height: 500px; display:flex; flex-direction:column; padding: 2rem;">
+
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.5rem;">
+                <h2
+                    style="color: var(--accent-gold); margin:0; font-size: 1.5rem; display:flex; align-items:center; gap:10px;">
+                    <i class="fa-solid fa-users"></i> Espace Social
+                </h2>
+                <button onclick="document.getElementById('socialModal').classList.add('hidden')" class="btn-icon">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+            </div>
+
+            <!-- TABS -->
+            <div class="social-tabs">
+                <button onclick="socialUI.switchTab('friends')" id="tabFriends"
+                    class="social-tab-btn active">Amis</button>
+                <button onclick="socialUI.switchTab('duels')" id="tabDuels" class="social-tab-btn">Duels</button>
+            </div>
+
+            <!-- TAB CONTENT: FRIENDS -->
+            <div id="viewFriends" class="tab-view animate-in">
+                <!-- Input Group -->
+                <div class="social-input-group">
+                    <input type="text" id="addFriendInput" placeholder="Pseudo de l'ami...">
+                    <button onclick="socialUI.handleSendRequest()" class="btn-send" title="Envoyer la demande">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+                <!-- Feedback Area -->
+                <div id="requestFeedback"
+                    style="font-size:0.9rem; padding-left:10px; margin-top:-1.5rem; margin-bottom:1.5rem; min-height:20px;">
+                </div>
+
+                <h5 class="section-title">Mes Amis</h5>
+                <div id="friendsList" class="social-list">
+                    <!-- Injected JS -->
+                </div>
+            </div>
+
+            <!-- TAB CONTENT: DUELS -->
+            <div id="viewDuels" class="tab-view hidden animate-in">
+                <button onclick="socialUI.startNewDuel()" class="btn-duel"
+                    style="width:100%; justify-content:center; margin-bottom:2rem; padding: 1rem;">
+                    <i class="fa-solid fa-bolt"></i> Lancer un Nouveau Duel
+                </button>
+
+                <h5 class="section-title">Duels en cours & Terminés</h5>
+                <div id="duelsList" class="social-list">
+                    <!-- Injected JS -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- QUIZ CONFIG MODAL -->
+    <div id="quizConfigModal" class="modal hidden" style="z-index: 2500;">
+        <div class="modal-content glass-panel" style="max-width: 500px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1.5rem;">
+                <h2 style="color: var(--accent-gold); margin:0;">Configuration du Quizz</h2>
+                <button onclick="document.getElementById('quizConfigModal').classList.add('hidden')" class="btn-icon"><i
+                        class="fa-solid fa-times"></i></button>
+            </div>
+
+            <p style="margin-bottom:1.5rem; color:#ddd;">
+                Testez vos connaissances ! Une série de 10 questions aléatoires basées sur l'histoire.
+            </p>
+
+            <div style="margin-bottom:1.5rem;">
+                <label style="display:flex; align-items:center; gap:10px; cursor:pointer;">
+                    <input type="checkbox" id="quizOnlyWatched" style="width:20px; height:20px;">
+                    <span>Uniquement sur les épisodes vus</span>
+                </label>
+            </div>
+
+            <button onclick="window.quiz.startQuiz({ onlyWatched: document.getElementById('quizOnlyWatched').checked })"
+                class="btn-google"
+                style="width: 100%; padding: 1rem; border-radius: 12px; background: var(--accent-gold); color: black; font-weight: bold; border: none; cursor: pointer; font-size:1.1rem;">
+                Lancer le Quizz <i class="fa-solid fa-play"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- DUEL CONFIG MODAL -->
+    <div id="duelConfigModal" class="modal hidden" style="z-index: 2500;">
+        <div class="modal-content glass-panel" style="max-width: 500px; padding: 2rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 2rem;">
+                <h2 style="color: var(--accent-gold); margin:0; font-size:1.5rem;">Nouveau Duel</h2>
+                <button onclick="document.getElementById('duelConfigModal').classList.add('hidden')" class="btn-icon"><i
+                        class="fa-solid fa-times"></i></button>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+
+                <!-- Modern Tabs for Mode Selection -->
+                <div class="social-tabs" style="margin-bottom:1.5rem;">
+                    <button onclick="socialUI.setDuelMode('link')" id="btnDuelLink" class="social-tab-btn active"
+                        style="flex:1;">
+                        <i class="fa-solid fa-link"></i> Lien
+                    </button>
+                    <button onclick="socialUI.setDuelMode('friend')" id="btnDuelFriend" class="social-tab-btn"
+                        style="flex:1;">
+                        <i class="fa-solid fa-user-check"></i> Ami
+                    </button>
+                </div>
+
+                <!-- Custom Friend List (Replaxe Select) -->
+                <div id="duelFriendSelect" class="hidden" style="margin-bottom: 1.5rem;">
+                    <div id="duelFriendList" class="social-list" style="max-height: 200px; padding:5px;">
+                        <!-- JS Injected Cards -->
+                    </div>
+                    <input type="hidden" id="selectedDuelFriendId">
+                </div>
+            </div>
+
+            <p
+                style="color:var(--text-secondary); font-size:0.95rem; margin-bottom:2rem; line-height:1.5; background:rgba(255,255,255,0.03); padding:1rem; border-radius:10px; border-left:3px solid var(--accent-blue);">
+                <i class="fa-solid fa-info-circle" style="color:var(--accent-blue); margin-right:5px;"></i>
+                Vous allez jouer une manche de 10 questions. Votre score sera enregistré et votre adversaire devra vous
+                battre sur les <strong>mêmes questions</strong>.
+            </p>
+
+            <button onclick="socialUI.launchDuel()" class="btn-duel"
+                style="width: 100%; padding: 1rem; justify-content:center; font-size:1.1rem; height:auto;">
+                C'est parti ! <i class="fa-solid fa-rocket" style="margin-left:10px;"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- QUIZ PLAYER OVERLAY -->
+    <div id="quizPlayer" class="player-overlay hidden">
+        <!-- Fullscreen Background Image (Same structure as Episode Player) -->
+        <img id="quizBackgroundImage" class="player-fullscreen-bg" src="" alt="Background">
+        <div class="player-overlay-gradient"></div> <!-- Dark overlay for readability -->
+        <div class="player-header">
+            <button
+                onclick="if(confirm('Quitter le quizz ?')) document.getElementById('quizPlayer').classList.add('hidden')"
+                class="btn-icon">
+                <i class="fa-solid fa-times"></i> Quitter
+            </button>
+            <h3 id="quizProgress" style="color: white;">Question 1 / 10</h3>
+            <div style="width: 40px;"></div> <!-- Spacer -->
+        </div>
+
+        <div class="progress-bar"
+            style="height: 4px; background: rgba(255,255,255,0.1); width:100%; max-width: none; position:absolute; top:70px; left: 0;">
+            <div id="quizProgressBar" class="progress-fill"
+                style="width: 10%; background: var(--accent-gold); height:100%; transition: width 0.3s;"></div>
+        </div>
+
+        <div style="flex:1; display:flex; justify-content:center; align-items:center; padding:1rem;">
+            <div id="quizCardContainer" style="width:100%; max-width:700px;">
+                <!-- Question injected here -->
             </div>
         </div>
     </div>
@@ -333,6 +519,31 @@
     <script src="data/data_episode_136_voc.js"></script>
     <script src="data/data_episode_137_virginie.js"></script>
     <script src="data/data_episode_138_westphalie.js"></script>
+
+    <!-- QUIZ DATA -->
+    <!-- BATCH 1 REBUILD -->
+    <script src="data/quiz/quiz_episode_1_sapiens.js"></script>
+    <script src="data/quiz/quiz_episode_2_lascaux.js"></script>
+    <!-- BATCH 2 REBUILD -->
+    <script src="data/quiz/quiz_episode_3_rome.js"></script>
+    <script src="data/quiz/quiz_episode_4_neolithique.js"></script>
+    <!-- BATCH 3 REBUILD -->
+    <script src="data/quiz/quiz_episode_5_ecriture_uruk.js"></script>
+    <script src="data/quiz/quiz_episode_6_pyramides.js"></script>
+    <!-- BATCH 4 REBUILD -->
+    <script src="data/quiz/quiz_episode_7_hammurabi.js"></script>
+    <script src="data/quiz/quiz_episode_8_toutankhamon.js"></script>
+    <!-- BATCH 5 REBUILD -->
+    <script src="data/quiz/quiz_episode_9_salamine.js"></script>
+    <!-- Episode 10 MISSING DATA -->
+    <script src="data/quiz/quiz_episode_11_alexandre.js"></script>
+    <!-- BATCH 6 REBUILD -->
+    <script src="data/quiz/quiz_episode_12_chine_qin.js"></script>
+    <script src="data/quiz/quiz_episode_13_cesar.js"></script>
+    <!-- BATCH 7 REBUILD -->
+    <script src="data/quiz/quiz_episode_14_auguste.js"></script>
+    <script src="data/quiz/quiz_episode_15_jesus.js"></script>
+
     <!-- Main Data Aggregator (Must be loaded LAST) -->
     <script src="data/generated_priorities.js"></script>
     <script src="data/data_episodes.js"></script>
@@ -343,11 +554,14 @@
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
 
     <!-- App Configuration & Auth -->
-    <script src="firebase-config.js"></script>
-    <script src="auth.js"></script>
-
-    <!-- App Logic -->
-    <script src="explorer.js"></script>
+    <script src="firebase-config.js?v=1.6"></script>
+    <!-- CORE LOGIC (Cache-Busted) -->
+    <script src="auth.js?v=20260110_2200"></script>
+    <script src="explorer.js?v=20260110_2200"></script>
+    <script src="quiz.js?v=20260110_2200"></script>
+    <script src="social.js?v=20260110_2200"></script>
+    <script src="social_ui.js?v=20260110_2200"></script>
+    <script src="check_duplicates.js?v=20260110_2200"></script>
 </body>
 
 </html>

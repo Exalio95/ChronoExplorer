@@ -6,7 +6,7 @@ const data_ep130 = [
         category: "Origine",
         content: "Une paysanne de 17 ans",
         date: "Domrémy",
-        detail: "Jeanne n'était qu'une bergère illettrée de Lorraine. En pleine Guerre de Cent Ans, alors que la France était à genoux et le roi Charles VII désespéré, elle affirme entendre des voix (Saint Michel, Sainte Catherine) lui ordonnant de 'bouter les Anglais hors de France'. <br><br><strong>Anecdote:</strong> C'est improbable qu'on l'ait écoutée. C'est le signe du désespoir total de la cour.",
+        detail: "Jeanne, bergère illettrée de Lorraine, affirme entendre des voix divines lui ordonnant de sauver la France. Le fait qu'un roi désespéré ait accepté de confier son armée à une adolescente paysanne montre bien l'état de délabrement total de la France à cette époque.",
         tags: ["Jeunesse", "Miracle", "Voix"],
         img: "assets/images/ep130_jeanne_voices.png"
     },
@@ -15,7 +15,7 @@ const data_ep130 = [
         category: "Guerre",
         content: "Le Siège d'Orléans",
         date: "8 mai 1429",
-        detail: "En 9 jours, elle a levé le siège d'Orléans qui durait depuis 6 mois ! Elle n'avait aucune formation militaire, mais elle montait à l'assaut avec son étendard blanc, galvanisant les hommes démoralisés. Elle a reçu une flèche dans l'épaule mais a continué. <br><br><strong>Anecdote:</strong> C'est le tournant psychologique de la guerre.",
+        detail: "En seulement 9 jours, elle a levé le siège d'Orléans qui durait depuis 6 mois ! Sans formation militaire, elle menait la charge étendard au vent, galvanisant des troupes démoralisées. Blessée par une flèche à l'épaule, elle est retournée au combat, créant un choc psychologique décisif.",
         tags: ["Bataille", "Victoire", "Orleans"],
         img: "assets/images/ep130_siege_orleans.png"
     },
@@ -24,7 +24,7 @@ const data_ep130 = [
         category: "Politique",
         content: "Le Sacre à Reims",
         date: "Légitimité",
-        detail: "Son coup de génie politique : traverser les lignes ennemies pour faire sacrer Charles VII à Reims (lieu traditionnel). Cela a donné au roi une légitimité divine que les Anglais ne pouvaient pas contester. <br><br><strong>Anecdote:</strong> 'Gentil Dauphin' est devenu 'Roi'.",
+        detail: "son coup de génie fut politique : traverser les lignes ennemies pour faire sacrer Charles VII à Reims. Cela a donné au 'Gentil Dauphin' une légitimité divine incontestable que les Anglais ne pouvaient plus attaquer. C'est le moment où le Dauphin devient vraiment Roi.",
         tags: ["Sacre", "Roi", "Reims"],
         img: "assets/images/ep130_coronation_reims.png"
     },
@@ -33,7 +33,7 @@ const data_ep130 = [
         category: "Capture",
         content: "Compiègne",
         date: "Trahison",
-        detail: "Elle est capturée à Compiègne par les Bourguignons (alliés des Anglais). Le Roi Charles VII n'a RIEN fait pour la racheter ou la sauver. Il l'a abandonnée une fois qu'elle ne servait plus. <br><br><strong>Anecdote:</strong> Elle a essayé de s'évader en sautant d'une tour de 20 mètres !",
+        detail: "Capturée à Compiègne par les Bourguignons, elle a été vendue aux Anglais. Le Roi Charles VII n'a rien fait pour la racheter, l'abandonnant lâchement une fois qu'elle ne lui servait plus. Elle a même tenté de s'évader en sautant d'une tour de 20 mètres !",
         tags: ["Capture", "Trahison", "Héros"],
         img: "assets/images/ep130_capture_compiegne.png"
     },
@@ -42,7 +42,7 @@ const data_ep130 = [
         category: "Procès",
         content: "L'Évêque Cauchon",
         date: "Rouen",
-        detail: "Son procès était une farce politique dirigée par Pierre Cauchon (évêque pro-anglais). On l'accusait d'hérésie et de sorcellerie... surtout parce qu'elle portait des habits d'homme (ce qui était interdit par la Bible, Deutéronome 22:5). <br><br><strong>Anecdote:</strong> Elle a tenu tête à des dizaines de théologiens chevronnés avec une répartie géniale.",
+        detail: "Son procès à Rouen était une farce politique dirigée par l'évêque pro-anglais Pierre Cauchon. On l'accusait d'hérésie et surtout de porter des habits d'homme (interdit par la Bible). Malgré son ignorance théologique, elle a tenu tête seule à des dizaines de juges avec une intelligence stupéfiante.",
         tags: ["Procès", "Religion", "Injustice"],
         img: "assets/images/ep130_trial_rouen.png"
     },
@@ -51,7 +51,7 @@ const data_ep130 = [
         category: "Citation",
         content: "L'état de grâce",
         date: "Répartie",
-        detail: "Piège : 'Savez-vous si vous êtes en la grâce de Dieu ?' (Si elle dit oui, c'est de l'orgueil/hérésie. Si non, elle est coupable). Réponse : 'Si je n'y suis, Dieu m'y mette ; et si j'y suis, Dieu m'y garde'. Les juges étaient stupéfaits. <br><br><strong>Anecdote:</strong> Une réponse parfaite théologiquement.",
+        detail: "Au piège 'Êtes-vous en état de grâce ?' (répondre Oui est de l'orgueil, Non est un aveu de culpabilité), elle répondit : 'Si je n'y suis, Dieu m'y mette ; et si j'y suis, Dieu m'y garde'. Une réponse théologiquement parfaite qui a laissé ses juges sans voix.",
         tags: ["Citation", "Intelligence", "Dieu"],
         img: "assets/images/ep130_jeanne_answering.png"
     },
@@ -60,7 +60,7 @@ const data_ep130 = [
         category: "Mort",
         content: "Le Bûcher",
         date: "30 mai 1431",
-        detail: "Brûlée vive sur la place du Vieux-Marché à Rouen, à 19 ans. Elle a crié 'Jésus !' six fois. Les Anglais ont jeté ses cendres dans la Seine pour éviter qu'on en fasse des reliques. <br><br><strong>Anecdote:</strong> Le bourreau aurait dit : 'Nous sommes perdus, nous avons brûlé une sainte'.",
+        detail: "Brûlée vive à 19 ans sur la place du Vieux-Marché à Rouen, en criant 'Jésus !'. Les Anglais ont jeté ses cendres dans la Seine pour éviter tout culte des reliques. Le bourreau lui-même aurait dit en pleurant : 'Nous sommes perdus, nous avons brûlé une sainte'.",
         tags: ["Mort", "Feu", "Martyre"],
         img: "assets/images/ep130_stake_rouen.png"
     },
@@ -69,7 +69,7 @@ const data_ep130 = [
         category: "Compagnon",
         content: "Gilles de Rais",
         date: "Barbe Bleue",
-        detail: "L'un de ses lieutenants les plus dévoués était Gilles de Rais... qui deviendra plus tard le plus grand tueur en série d'enfants du Moyen Âge (l'inspiration de Barbe Bleue). <br><br><strong>Anecdote:</strong> Certains disent que la mort de Jeanne l'a rendu fou.",
+        detail: "L'un de ses lieutenants les plus fidèles était Gilles de Rais. Après la mort de Jeanne, il sombrera dans la folie et deviendra le plus grand tueur en série d'enfants du Moyen Âge, inspirant le conte de Barbe Bleue. Certains disent que c'est la mort de Jeanne qui a brisé son esprit.",
         tags: ["Tueur", "Compagnon", "Contraste"],
         img: "assets/images/ep130_gilles_de_rais.png"
     },
@@ -78,7 +78,7 @@ const data_ep130 = [
         category: "Réhabilitation",
         content: "Le procès de 1456",
         date: "Justice",
-        detail: "25 ans plus tard, une fois la guerre gagnée, Charles VII a ordonné un nouveau procès (pour ne pas tenir sa couronne d'une hérétique). Jeanne a été innocentée à titre posthume. <br><br><strong>Anecdote:</strong> Canonisée seulement en 1920.",
+        detail: "25 ans plus tard, Charles VII a ordonné un nouveau procès pour 'nettoyer' son sacre. Jeanne a été innocentée à titre posthume. Elle ne sera cependant canonisée par l'Église qu'en 1920, près de 500 ans plus tard.",
         tags: ["Justice", "Sainte", "Église"],
         img: "assets/images/ep130_canonization.png"
     },
@@ -87,7 +87,7 @@ const data_ep130 = [
         category: "Art",
         content: "L'anneau de Jeanne",
         date: "Relique",
-        detail: "Son anneau (Jhesus Maria) a été volé par Cauchon et emporté en Angleterre. Il a été racheté aux enchères par le Puy du Fou en 2016 pour 376 000€. Les Anglais ont essayé d'empêcher sa sortie du territoire ! <br><br><strong>Anecdote:</strong> Une bataille diplomatique moderne.",
+        detail: "Son anneau a été volé par l'évêque Cauchon et emporté en Angleterre. Il a été racheté aux enchères par le Puy du Fou en 2016 pour 376 000€. Les Anglais ont tenté d'empêcher sa sortie du territoire, créant un incident diplomatique moderne tragi-comique.",
         tags: ["Objet", "Enchère", "Actu"],
         img: "assets/images/ep130_jeanne_ring.png"
     },
@@ -96,7 +96,7 @@ const data_ep130 = [
         category: "Mythe",
         content: "Fille de roi ?",
         date: "Complot",
-        detail: "La théorie 'bâtarde' dit qu'elle était la demi-sœur cachée du roi (fille d'Isabeau de Bavière et Louis d'Orléans), ce qui expliquerait qu'on lui ait confié une armée. Les historiens rejettent cette théorie (ADN, preuves). <br><br><strong>Anecdote:</strong> Les théories du complot existaient déjà.",
+        detail: "Une théorie persistante (mais rejetée par les historiens) affirme qu'elle était la demi-sœur cachée du roi, ce qui expliquerait son accès facile à la cour. Les preuves manquent, mais cela montre que les 'théories du complot' ne datent pas d'internet !",
         tags: ["Théorie", "Secret", "Faux"],
         img: "assets/images/ep130_conspiracy_theory.png"
     },
@@ -105,7 +105,7 @@ const data_ep130 = [
         category: "Genre",
         content: "Transgression",
         date: "Cheveux courts",
-        detail: "Jeanne a coupé ses cheveux 'en écuelle' (coupe au bol masculine) et portait une armure. C'était une transgression de genre intolérable pour l'Église de l'époque. C'est techniquement pour 'travestissement' (relaps) qu'elle a été brûlée. <br><br><strong>Anecdote:</strong> Elle disait que c'était pour protéger sa vertu des soldats.",
+        detail: "Jeanne portait les cheveux courts 'en écuelle' et une armure d'homme. C'était une transgression de genre intolérable pour l'Église médiévale. Techniquement, c'est pour 'travestissement' (relaps) qu'elle a été condamnée au bûcher, car elle avait repris l'habit d'homme en prison (pour se protéger des viols, disait-elle).",
         tags: ["Genre", "Vêtement", "Armure"],
         img: "assets/images/ep130_jeanne_armor.png"
     },
@@ -114,7 +114,7 @@ const data_ep130 = [
         category: "Symbole",
         content: "Nationalisme",
         date: "France",
-        detail: "Avant Jeanne, on se battait pour son seigneur. Après Jeanne, on se battait pour la 'France'. Elle a incarné le sentiment national naissant. <br><br><strong>Anecdote:</strong> Récupérée par tous les partis politiques (gauche, droite, extrême-droite) au 20ème siècle.",
+        detail: "Avant Jeanne, on se battait pour son seigneur féodal. Après Jeanne, on commence à se battre pour la 'France'. Elle incarne la naissance du sentiment national. Au 20ème siècle, tous les partis politiques (de l'extrême-droite aux communistes) ont tenté de récupérer son image.",
         tags: ["Symbole", "Politique", "France"],
         img: "assets/images/ep130_golden_statue_paris.png"
     },
@@ -123,7 +123,7 @@ const data_ep130 = [
         category: "Arme",
         content: "L'épée de Sainte-Catherine",
         date: "Fierbois",
-        detail: "Elle a demandé qu'on aille chercher une vieille épée enterrée derrière l'autel de Sainte-Catherine-de-Fierbois. On l'a trouvée, couvertes de rouille (qui est partie d'un coup). <br><br><strong>Anecdote:</strong> Elle a cassé cette épée miraculeuse en frappant... des prostituées qui suivaient l'armée (elle voulait une armée 'propre').",
+        detail: "Ses voix lui ont indiqué l'emplacement d'une vieille épée rouillée enterrée derrière l'autel de Sainte-Catherine-de-Fierbois. Mais cette épée miraculeuse a fini brisée... Jeanne l'a cassée en frappant du plat de la lame sur le dos de prostituées qui suivaient son armée (elle voulait des soldats pieux !).",
         tags: ["Épée", "Miracle", "Colère"],
         img: "assets/images/ep130_sword_fierbois.png"
     },
@@ -132,7 +132,7 @@ const data_ep130 = [
         category: "Conclusion",
         content: "Une étoile filante",
         date: "2 ans",
-        detail: "Sa vie publique n'a duré que 2 ans (1429-1431). Jamais une personne si jeune, d'origine si modeste, n'a eu un tel impact sur l'histoire mondiale en si peu de temps. <br><br><strong>Anecdote:</strong> Napoléon a dit : 'Jeanne d'Arc n'est pas un miracle, elle est le fruit d'une situation désespérée'.",
+        detail: "Sa vie publique n'a duré que 2 ans (1429-1431). Jamais une personne si jeune, d'origine si modeste, n'a eu un tel impact sur l'histoire en si peu de temps. Napoléon dira d'elle : 'Jeanne d'Arc n'est pas un miracle, elle est le fruit d'une situation désespérée'.",
         tags: ["Destin", "Court", "Impact"],
         img: "assets/images/ep130_ingres_painting.png"
     }
